@@ -1,0 +1,11 @@
+{
+    "id": "wants(mary,find_out_who_at(door))=true",
+    "children": [
+        {
+            "id": "walk_to(mary,door)=true"
+        },
+        {
+            "id": "in_flat(mary)=true"
+        }
+    ]
+}

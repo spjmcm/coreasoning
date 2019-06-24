@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="circle" ondrop="drop(event)" ondragover="allowDrop(event)" >
+    <svg id="dest" width="250" height="100">
+        <circle id="yelcirc" cx="50" cy="50" r="50" fill="yellow"  />
+        <circle id="greencirc" cx="160" cy="50" r="50" fill="green" />
+    </svg>
+</div>
+<img id="draglogo" src="https://placeimg.com/105/73/any" draggable="true" ondragstart="drag(event)" class="draggable"  ondragend="" width="105" height="73">
+</body>
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text"),
+            img = document.getElementById(data),
+            imgSrc = img.getAttribute('src'),
+            imgW = img.getAttribute('width'),
+            imgH = img.getAttribute('height'),
+            //for example you can calculate X position from event circle
+            imgX = ev.target.getAttribute('cx') - ev.target.getAttribute('r');
+        // console.log(ev.target);
+        ev.target.parentElement.innerHTML += '<image xlink:href="' + imgSrc + '" x="' + imgX + '" y="0" width="' + imgW + 'px" height="' + imgH + 'px"/>';
+        img.parentNode.removeChild(img);
+    }
+</script>
+</html>

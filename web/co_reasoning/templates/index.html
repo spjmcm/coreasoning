@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static "js/drag-and-drop.js" %}"></script>
+</head>
+<body>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="story_text">Ann rang the doorbell. Mary, who was in the flat watching TV, got up from her chair and walked to the door. She was afraid. Mary looked through the keyhole. Mary saw Ann, her flatmate, at the door. Mary opened the door and asked Ann why she did not use her keys to come in the flat? Ann replied that she is upset that she did not agree to come with her at the shops. She wanted to get her up from her chair in front of the TV.</div>
+        <div id="question_text"><b>Question: </b> q(1) ?? has(ann,doorkeys)</div>
+        <div class="container-fluid" style="margin-top:5px;">
+            <div class="row">
+                <div class="col-8">
+                    <svg id="svg_for_vis"></svg>
+                </div>
+                <div class="col" id="text_explain"></div>
+            </div>
+        </div>
+        <div class="container" style="text-align:center;">
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modify the node</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="node_text" class="col-form-label">Node:</label>
+                            <input type="text" class="form-control" id="node_text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modal_save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--    <script src="{% static "js/force-directed%20graph.js" %}"></script>-->
+    <script src="{% static "js/tree.js" %}"></script>
+    <script src="{% static "js/modal.js" %}"></script>
+    <script src="{% static "js/dfs.js" %}"></script>
+</body>
+</html>

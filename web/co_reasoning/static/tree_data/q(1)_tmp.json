@@ -1,0 +1,1 @@
+{"id": "has(ann,doorkeys)=true", "children": [{"id": "is_a(ann,resident)=true", "children": [{"id": "flatmate(mary,ann)=true", "children": [{"id": "person(ann)"}]}, {"id": "in_flat(mary)=true"}], "name": "p(35)"}], "name": "p(13)"}
