@@ -81,7 +81,7 @@ function bfs(q, num) {
                 count++;
             }
         }
-        $("#text_explain").prepend("<div>" + text + "</div>")
+        $("#text_explain").prepend("<p class='natural_language_text'>" + text + "</p>")
     }
     if(count > 0) bfs(q, count);
 }
@@ -314,4 +314,39 @@ $("#submit").click(function (e) {
     queue = [];
     queue.push(root.data);
     bfs(queue, 1);
+
+    // $.ajax({
+    //     url:'/co_reasoning/get_dropped_data/',
+    //     type: 'GET',
+    //     data: change_data,
+    //     dataType: 'json',
+    //     success: function (data) {
+    //         // d3.json("/static/data/q(1)_tmp.json", function(error, graph) {
+    //         //     if (error) throw error;
+    //         //     update(graph.links, graph.nodes);
+    //         //     simulation.re
+    //         // });
+    //         d3.json("/static/tree_data/q(1)_tmp.json", function (error, treeData) {
+    //             // Assigns parent, children, height, depth
+    //             root = d3.hierarchy(treeData, function(d) { return d.children; });
+    //             root.x0 = width / 2;
+    //             root.y0 = height;
+    //             root.children.forEach(collapse);
+    //
+    //             update(root);
+    //         });
+    //     }
+    // })
+
 });
+
+// the input for adding narratives
+$("#input_add_node").keypress(function (e) {
+    if(e.keyCode == 13){
+        var text = $(this).val();
+        $("<div class='narrative' draggable='true' ondragstart='drag(event)' id='drag" + narrative_count + "'>" +
+            text + "</div>").insertBefore($("#drag" + top_index));
+        top_index = narrative_count;
+        narrative_count += 1;
+    }
+})

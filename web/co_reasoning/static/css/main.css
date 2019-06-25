@@ -11,17 +11,19 @@ text {
     float: left;
     margin: 10px;
     padding: 10px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 #div1{
-    width: 12%;
-    height: 504px;
+    width: 20%;
+    height: 633px;
     overflow: scroll;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #div2{
-    width: 80%;
+    width: 70%;
 }
 /* for  tree visualization */
 .node {
@@ -63,15 +65,40 @@ text {
 svg{
     width: 100%;
     height: 500px;
+    border: 1px solid black;
+}
+
+.text_body{
+    float: left;
+    /*border: 1px solid black;*/
+    height: 500px;
+    font-size: 0.85em;
+    padding: 0;
 }
 
 #text_explain{
-    float: left;
-    border: 1px solid black;
-    height: 500px;
-    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*opacity: 0.7;*/
+    color: #7af84f;
+    height: 95%;
+    overflow: scroll;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text_header{
+    height: 5%;
+    background-color: #373738;
+    margin: 0;
+    border-radius: 6px 6px 0px 0px;
+    /*text-align: center;*/
+    color: #b2b2b3;
 }
 
 #question_text{
     text-align: center;
+}
+.natural_language_text{
+    padding-left: 5px;
+    margin-bottom: 0;
 }

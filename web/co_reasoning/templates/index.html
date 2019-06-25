@@ -8,10 +8,16 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static "js/drag-and-drop.js" %}"></script>
+    <script src="https://kit.fontawesome.com/090f4edd35.js"></script>
 </head>
 <body>
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-        
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-plus"></i></span>
+            </div>
+            <input id="input_add_node" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Type here to add new narratives">
+        </div>
     </div>
 
     <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -22,7 +28,12 @@
                 <div class="col-8">
                     <svg id="svg_for_vis"></svg>
                 </div>
-                <div class="col" id="text_explain"></div>
+                <div class="col text_body">
+                    <div class="row text_header align-items-center justify-content-center">
+                        <p>Dialogue Window</p>
+                    </div>
+                    <div  id="text_explain"></div>
+                </div>
             </div>
         </div>
         <div class="container" style="text-align:center;">

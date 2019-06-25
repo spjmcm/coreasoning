@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e37e0e9-bce7-4bde-aa64-3b921f8ed1ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/dfs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../static/js/dfs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/js/drag-and-drop.js" beforeDir="false" afterPath="$PROJECT_DIR$/../static/js/drag-and-drop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../static/js/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../static/js/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,17 +21,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
+            <state relative-caret-position="465">
+              <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2676#2683#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -38,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../static/js/drag-and-drop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+            <state relative-caret-position="435">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -47,10 +53,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../static/js/dfs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="285">
               <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding>
-                <element signature="n#!!block;n#dfs_add_node#0" />
                 <element signature="n#!!block;n#dfs_replace_node_text#0" />
                 <element signature="n#!!block;n#dfs_link#0" />
                 <element signature="n#!!block;n#update_data#0" />
@@ -59,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../static/js/tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3241">
-              <caret line="298" column="1" selection-start-line="298" selection-start-column="1" selection-end-line="298" selection-end-column="1" />
+            <state relative-caret-position="377">
+              <caret line="83" column="67" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="67" />
               <folding>
                 <element signature="n#!!block;n#collapse#0" />
                 <element signature="n#!!block;n#diagonal#0;n#!!block;n#update#0" />
@@ -89,6 +94,8 @@
       <find>width</find>
       <find>click</find>
       <find>event</find>
+      <find>text</find>
+      <find>over</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,18 +108,18 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/tree.js" />
         <option value="$PROJECT_DIR$/../static/js/force-directed graph.js" />
-        <option value="$PROJECT_DIR$/../static/js/drag-and-drop.js" />
         <option value="$PROJECT_DIR$/../static/js/modal.js" />
+        <option value="$PROJECT_DIR$/../static/js/dfs.js" />
+        <option value="$PROJECT_DIR$/../static/js/drag-and-drop.js" />
+        <option value="$PROJECT_DIR$/../static/js/tree.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../static/css/main.css" />
-        <option value="$PROJECT_DIR$/../static/js/tree.js" />
-        <option value="$PROJECT_DIR$/../static/js/dfs.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="62" />
+    <option name="x" value="295" />
+    <option name="y" value="43" />
     <option name="width" value="1400" />
     <option name="height" value="766" />
   </component>
@@ -194,18 +201,18 @@
       <workItem from="1561231715333" duration="11511000" />
       <workItem from="1561317856655" duration="8140000" />
       <workItem from="1561338598057" duration="3315000" />
-      <workItem from="1561485659713" duration="290000" />
+      <workItem from="1561485659713" duration="6062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75329000" />
+    <option name="totallyTimeSpent" value="81101000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="62" width="1400" height="766" extended-state="0" />
+    <frame x="295" y="43" width="1400" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17766498" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24510515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,33 +277,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../static/js/drag-and-drop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../static/js/dfs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="285">
           <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#dfs_add_node#0" />
             <element signature="n#!!block;n#dfs_replace_node_text#0" />
             <element signature="n#!!block;n#dfs_link#0" />
             <element signature="n#!!block;n#update_data#0" />
@@ -306,12 +291,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../static/js/tree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3241">
-          <caret line="298" column="1" selection-start-line="298" selection-start-column="1" selection-end-line="298" selection-end-column="1" />
+        <state relative-caret-position="377">
+          <caret line="83" column="67" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="67" />
           <folding>
             <element signature="n#!!block;n#collapse#0" />
             <element signature="n#!!block;n#diagonal#0;n#!!block;n#update#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../static/js/drag-and-drop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2676#2683#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
