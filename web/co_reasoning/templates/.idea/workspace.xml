@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e37e0e9-bce7-4bde-aa64-3b921f8ed1ed" name="Default Changelist" comment="" />
+    <list default="true" id="2e37e0e9-bce7-4bde-aa64-3b921f8ed1ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/js/dfs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../static/js/dfs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../static/js/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/../static/js/tree.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -40,23 +44,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../static/js/dfs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding>
+                <element signature="n#!!block;n#dfs_add_node#0" />
                 <element signature="n#!!block;n#dfs_replace_node_text#0" />
+                <element signature="n#!!block;n#dfs_link#0" />
+                <element signature="n#!!block;n#update_data#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../static/js/tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="275" column="38" selection-start-line="275" selection-start-column="38" selection-end-line="275" selection-end-column="38" />
+            <state relative-caret-position="3241">
+              <caret line="298" column="1" selection-start-line="298" selection-start-column="1" selection-end-line="298" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#collapse#0" />
                 <element signature="n#!!block;n#diagonal#0;n#!!block;n#update#0" />
@@ -84,6 +91,9 @@
       <find>event</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -95,17 +105,18 @@
         <option value="$PROJECT_DIR$/../static/js/modal.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../static/css/main.css" />
-        <option value="$PROJECT_DIR$/../static/js/dfs.js" />
         <option value="$PROJECT_DIR$/../static/js/tree.js" />
+        <option value="$PROJECT_DIR$/../static/js/dfs.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="315" />
+    <option name="x" value="40" />
     <option name="y" value="62" />
     <option name="width" value="1400" />
     <option name="height" value="766" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -127,6 +138,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -182,14 +194,15 @@
       <workItem from="1561231715333" duration="11511000" />
       <workItem from="1561317856655" duration="8140000" />
       <workItem from="1561338598057" duration="3315000" />
+      <workItem from="1561485659713" duration="290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75039000" />
+    <option name="totallyTimeSpent" value="75329000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="315" y="62" width="1400" height="766" extended-state="0" />
+    <frame x="40" y="62" width="1400" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17766498" />
@@ -250,17 +263,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../static/js/modal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -278,23 +291,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../static/js/tree.js">
+    <entry file="file://$PROJECT_DIR$/../static/js/dfs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="275" column="38" selection-start-line="275" selection-start-column="38" selection-end-line="275" selection-end-column="38" />
+        <state relative-caret-position="60">
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#collapse#0" />
-            <element signature="n#!!block;n#diagonal#0;n#!!block;n#update#0" />
+            <element signature="n#!!block;n#dfs_add_node#0" />
+            <element signature="n#!!block;n#dfs_replace_node_text#0" />
+            <element signature="n#!!block;n#dfs_link#0" />
+            <element signature="n#!!block;n#update_data#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../static/js/dfs.js">
+    <entry file="file://$PROJECT_DIR$/../static/js/tree.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="3241">
+          <caret line="298" column="1" selection-start-line="298" selection-start-column="1" selection-end-line="298" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#dfs_replace_node_text#0" />
+            <element signature="n#!!block;n#collapse#0" />
+            <element signature="n#!!block;n#diagonal#0;n#!!block;n#update#0" />
           </folding>
         </state>
       </provider>

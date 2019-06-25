@@ -135,6 +135,7 @@ function update(source) {
         })
         .on('click', click)
         .on("dblclick",function(d){
+            // dbclick a node to remove it
             clearTimeout(timeout);
             if(d.data.id != root.data.id){
                 var parent = d.parent.data,
@@ -258,14 +259,16 @@ function update(source) {
             node = d3.select(this);
         timeout = setTimeout(function() {
             if (ctrlKey){
+                // if click with ctrlKey, move a node to another node
                 var clicked = node.attr("stroke") == "red";
+
+                // check whether a node has been selected
                 if(clicked){
                     clicked_node = null;
                     node.attr("stroke", "steelblue");
                 }
                 else{
-                    // console.log(clicked_node);
-                    // console.log(d);
+                    // when there are two nodes selected, move the first one and set it as a child of the second one
                     if(clicked_node == null){
                         clicked_node = d;
                     }
@@ -274,14 +277,13 @@ function update(source) {
                             node2 = dfs_link(root.data, d.data, null, node1);
                         console.log(root.data);
                         update_data();
-                        // link_two_nodes(node1, node2);
-                        // console.log(root.data);
                         clicked_node = null;
                     }
                     node.attr("stroke", "red");
                 }
             }
             else{
+                // normal click, expand or collapse the tree
                 if (d.children){
                     d._children = d.children;
                     d.children = null;
@@ -294,29 +296,6 @@ function update(source) {
             }
         }, 300)
     }
-}
-
-function dfs_link(tree, n1, parent, n2) {
-    if(tree.id == n1.id){
-        if(n2 == null)
-            return tree;
-        for(var i = 0; i < parent.children.length; i++){
-            if(parent.children[i].id == tree.id)
-                parent.children.splice(i, 1);
-        }
-        if(!('children' in n2))
-            n2.children = [];
-        n2.children.push(tree);
-        return true;
-    }
-    else if('children' in tree){
-        for(var i = 0; i < tree.children.length; i++){
-            var result = dfs_link(tree.children[i], n1, tree, n2);
-            if (result != false)
-                return result;
-        }
-    }
-    return false;
 }
 
 function link_two_nodes(n1, n2){
