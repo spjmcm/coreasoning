@@ -274,7 +274,7 @@ function update(source) {
                     }
                     else{
                         var node1 = dfs_link(root.data, clicked_node.data, null, null),
-                            node2 = dfs_link(root.data, d.data, null, node1);
+                            node2 = dfs_link(root.data, node1, null, d.data);
                         console.log(root.data);
                         update_data();
                         clicked_node = null;
