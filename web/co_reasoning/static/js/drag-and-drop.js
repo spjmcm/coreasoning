@@ -2,10 +2,14 @@ var narrative_count = 0, top_index = 0;
 $(document).ready(function () {
     $.getJSON("/static/tree_data/s(0).json", function (data) {
         $.each( data, function( index, narrative) {
-            $('#div1').append("<div class='narrative' draggable='true' ondragstart='drag(event)' id='drag" + index + "'>" +
-                narrative + "</div>");
+            $('#list-narrative').append("<li class='narrative nav-item' draggable='true' ondragstart='drag(event)' id='drag" + index + "'>" +
+                "<i class='fa fa-circle-o'></i> " + narrative + "</li>");
             narrative_count += 1;
         });
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#div1').toggleClass('active');
     });
 });
 
