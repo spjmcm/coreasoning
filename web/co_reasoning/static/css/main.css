@@ -10,6 +10,7 @@ h4{
 text {
     font-family: sans-serif;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -67,17 +68,21 @@ text {
     min-height: 7%;
 }
 
-.btn-color{
+#instruction{
+    /*background-color: #b4b4b4;*/
+}
+
+.btn-color, #submit, #dropdownMenu2{
     background-color: #508cb8;
     border-color: #508cb8;
 }
 
-#sidebarCollapse:hover{
+#sidebarCollapse:hover, #undo:hover, #submit:hover, #dropdownMenu2:hover{
     background-color: #487ea5;
     border-color: #487ea5;
 }
 
-#sidebarCollapse{
+#sidebarCollapse, #undo{
     height: 49px;
     width: 50px;
 }
@@ -110,11 +115,11 @@ text {
     font: 12px sans-serif;
 }
 
-.link {
-    fill: none;
-    stroke: #ccc;
-    stroke-width: 2px;
-}
+/*.links {*/
+/*    fill: none;*/
+/*    stroke: #000000;*/
+/*    stroke-width: 2px;*/
+/*}*/
 
 .arrow {
     fill: lightsteelblue;
@@ -159,7 +164,7 @@ svg{
     background-color: rgba(0, 0, 0, 0.7);
     /*opacity: 0.7;*/
     color: #7af84f;
-    height: 95%;
+    height: 60%;
     overflow-y: scroll;
     border-radius: 0px 0px 6px 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -170,7 +175,6 @@ svg{
     background-color: #373738;
     margin: 0;
     border-radius: 6px 6px 0px 0px;
-    /*text-align: center;*/
     color: #b2b2b3;
 }
 
@@ -184,5 +188,52 @@ svg{
 }
 
 #submit{
-    margin-top: 10px;
+    margin-top: 5px;
+
+}
+
+.dropdown-toggle::after{
+    margin-left: 0;
+}
+
+.card-header{
+    height: 40px;
+    padding: 0rem 1.25rem;
+}
+
+.node circle{
+    fill: #5d8cb4;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: .6;
+    stroke-width: 1px;
+    stroke-width: 3px;
+    cursor: pointer;
+}
+
+line.selected {
+    stroke: red;
+    stroke-opacity: 1;
+}
+
+.new_line {
+    stroke: yellow;
+    stroke-opacity: .8;
+    stroke-width: 6px;
+}
+
+.node.selected circle {
+    fill: red;
+    stroke-width: 1.5px;
+}
+
+.node.selected_target circle {
+    fill: pink;
+    stroke-width: 1.5px;
+}
+
+rect {
+    fill: white;
 }

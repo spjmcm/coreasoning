@@ -137,6 +137,7 @@ function update(source) {
         .on("dblclick",function(d){
             // dbclick a node to remove it
             clearTimeout(timeout);
+            last_data = $.extend(true, {}, root.data);
             if(d.data.id != root.data.id){
                 var parent = d.parent.data,
                     node = d.data;
@@ -273,9 +274,9 @@ function update(source) {
                         clicked_node = d;
                     }
                     else{
+                        last_data = $.extend(true, {}, root.data);
                         var node1 = dfs_link(root.data, clicked_node.data, null, null),
                             node2 = dfs_link(root.data, node1, null, d.data);
-                        console.log(root.data);
                         update_data();
                         clicked_node = null;
                     }
@@ -344,8 +345,9 @@ $("#submit").click(function (e) {
 $("#input_add_node").keypress(function (e) {
     if(e.keyCode == 13){
         var text = $(this).val();
-        $("<div class='narrative' draggable='true' ondragstart='drag(event)' id='drag" + narrative_count + "'>" +
-            text + "</div>").insertBefore($("#drag" + top_index));
+
+        $("<li class='narrative nav-item' draggable='true' ondragstart='drag(event)' id='drag" + narrative_count + "'>" +
+            "<i class='fa fa-circle-o'></i> " + text + "</li>").insertBefore($("#drag" + top_index));
         top_index = narrative_count;
         narrative_count += 1;
     }

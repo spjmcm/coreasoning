@@ -57,7 +57,6 @@ function update_data() {
     root = d3.hierarchy(root.data, function(d) { return d.children; });
     root.x0 = width / 2;
     root.y0 = height;
-    console.log(root);
-    root.children.forEach(collapse);
+    // root.children.forEach(collapse);
     update(root);
 }
