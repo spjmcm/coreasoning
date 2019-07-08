@@ -1,5 +1,5 @@
 var narrative_count = 0, top_index = 0;
-var last_data = {nodes: null, links: null}, text_explain_height;
+var text_explain_height, question = "has(ann,doorkeys)";
 $(document).ready(function () {
     text_explain_height = $("#text_explain").height();
     $.getJSON("/static/tree_data/s(0).json", function (data) {
@@ -44,7 +44,6 @@ function drop(ev) {
         source += "#true";
     }
     else source += "=true";
-    last_data.nodes = $.extend(true, [], nodes);
 
     var x = ev.pageX - document.getElementById("svg_for_vis").getBoundingClientRect().x,
         y = ev.pageY - document.getElementById("svg_for_vis").getBoundingClientRect().y;

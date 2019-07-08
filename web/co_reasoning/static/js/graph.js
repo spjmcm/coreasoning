@@ -2,7 +2,7 @@ var svg = d3.select("svg"),
     width = $("#svg_for_vis").width(),
     height = $("#svg_for_vis").height(),
     selected_node, selected_target_node,
-    selected_link, new_line,
+    selected_link, new_line, insert_link,
     circlesg, linesg,
     should_drag = false,
     drawing_line = false,
@@ -95,7 +95,6 @@ function update() {
         .attr("dy", ".35em");
     node.selectAll("text")
         .text(function(d) {
-            // console.log(d.id);
             return d.id})
         .attr("data-toggle", "modal")
         .attr("data-target", "#exampleModal")
@@ -191,21 +190,71 @@ function mouseup() {
     if (new_line) {
         if (selected_target_node) {
             selected_target_node.fixed = false;
-            var new_node = selected_target_node;
+            var new_node = selected_target_node, source_node = selected_node;
             selected_node.fixed = false;
+            var rules = {}
+            links.forEach(function (l) {
+                if(l.target.id === new_node.id){
+                    if(!(l.name in rules)){
+                        rules[l.name] = {}
+                        rules[l.name]["conclusion"] = l.target.id
+                        rules[l.name]["conditions"] = []
+                    }
+                    rules[l.name]["conditions"].push(l.source.id);
+                }
+            });
+            $("#edge_dropdown").empty();
+            var rule_text = "";
+            for(var key in rules){
+                for(var i = 0; i < rules[key]["conditions"].length; i++){
+                    var c = rules[key]["conditions"][i];
+                    rule_text += c.substring(0, c.length - 5);
+                    if(i != rules[key]["conditions"].length - 1)
+                        rule_text += " + ";
+                }
+                rule_text += " = " + rules[key]["conclusion"];
+                $("#edge_dropdown").append("<button class=\"dropdown-item\" type=\"button\" name=" + key + ">" + rule_text + "</button>");
+            }
+            $("#edge_dropdown").append("<button class=\"dropdown-item\" type=\"button\" name=\"new\">new rule</button>");
+            $(".dropdown-item").click(function () {
+                insert_link = {name: "", source: source_node, target: new_node};
+                var rule_id = $(this)[0].name, input_text = "";
+                insert_link.name = "";
+                if(rule_id.length > 0){
+                    if(rule_id in rules){
+                        input_text = source_node.id.substring(0, source_node.id.length - 5) + " + " + rule_text;
+                        insert_link.name = rule_id;
+                    }
+                    else{
+                        input_text = source_node.id.substring(0, source_node.id.length - 5) + " = " + new_node.id.substring(0, new_node.id.length - 5);
+                    }
+                }
+                $("#edge_input").val(input_text);
+            });
             $("#edgeModal").modal();
-            links.push({source: selected_node, target: new_node})
             selected_node = selected_target_node = null;
-            update();
         }
-        setTimeout(function () {
-            new_line.remove();
-            new_line = null;
-            force.start();
-            }, 30);
+        // setTimeout(function () {
+        //     new_line.remove();
+        //     new_line = null;
+        //     force.start();
+        //     }, 30);
         
     }
 }
+
+$("#edge_modal_save").click(function () {
+    force.stop();
+    links.push(insert_link);
+    update();
+    console.log(links);
+    if(new_line != null){
+        new_line.remove();
+        new_line = null;
+    }
+    force.start();
+    $('#edgeModal').modal('hide');
+});
 
 function keyup() {
     switch (d3.event.keyCode) {

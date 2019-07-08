@@ -158,7 +158,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="edgeModalLabel">Modify the node</h5>
+                    <h5 class="modal-title" id="edgeModalLabel">Add an edge</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -166,8 +166,17 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-<!--                            <label for="node_text" class="col-form-label">Node:</label>-->
-<!--                            <input type="text" class="form-control" id="node_text">-->
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button" id="edge_input">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu" id="edge_dropdown">
+                                        <button class="dropdown-item" type="button">Action</button>
+                                        <button class="dropdown-item" type="button">Another action</button>
+                                        <button class="dropdown-item" type="button">Something else here</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
