@@ -1,0 +1,37 @@
+{
+    "q(1)": {
+        "answer": "+",
+        "conclusion": "has(ann,doorkeys)=true",
+        "timestep": "1"
+    },
+    "q(2)": {
+        "answer": "-",
+        "conclusion": "is_a(ann,visitor)#true",
+        "timestep": "1"
+    },
+    "q(3)": {
+        "answer": "+",
+        "conclusion": "wants(mary,find_out_who_at(door))=true",
+        "timestep": "4"
+    },
+    "q(4)": {
+        "answer": "-",
+        "conclusion": "wants(mary,find_out_who_at(door))#true",
+        "timestep": "8"
+    },
+    "q(5)": {
+        "answer": "+",
+        "conclusion": "wants(ann,punish(mary))=true",
+        "timestep": "1"
+    },
+    "q(6)": {
+        "answer": "+",
+        "conclusion": "upset_with(ann,mary)=true",
+        "timestep": "1"
+    },
+    "q(7)": {
+        "answer": "+",
+        "conclusion": "refused(mary,ann,go_to(shops))=true",
+        "timestep": "1"
+    }
+}
