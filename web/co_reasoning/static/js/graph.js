@@ -184,6 +184,7 @@ function mousemove() {
     update();
 }
 
+var insert_link = null;
 // end node select / add new connected node
 function mouseup() {
     drawing_line = false;
@@ -245,15 +246,17 @@ function mouseup() {
 
 $("#edge_modal_save").click(function () {
     force.stop();
-    links.push(insert_link);
-    update();
-    console.log(links);
+    if(insert_link != null){
+        links.push(insert_link);
+        update();
+    }
     if(new_line != null){
         new_line.remove();
         new_line = null;
     }
     force.start();
     $('#edgeModal').modal('hide');
+    insert_link = null;
 });
 
 function keyup() {
