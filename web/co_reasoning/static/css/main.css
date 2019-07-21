@@ -18,6 +18,12 @@ text {
     align-items: stretch;
 }
 
+.two-story-container{
+  display: inline-block;
+  width: 50%;
+  height: 400px;
+}
+
 #div1, #div2 {
     float: left;
     /*margin: 10px;*/
