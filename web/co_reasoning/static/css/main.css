@@ -22,6 +22,7 @@ text {
   float: left;
   display: inline-block;
   width: 50%;
+  height: 100px;
   padding: 2px;
   border: 1px solid black;
 }
