@@ -18,6 +18,10 @@ text {
     align-items: stretch;
 }
 
+.rule-list{
+  background-color: black;
+}
+
 .two-story-container{
   float: left;
   display: inline-block;
