@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/090f4edd35.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="div1">
+
+            <div class="sidebar-header">
+                <h4>Options</h4>
+            </div>
+
+            <div class="input-group input-group-sm" style="margin: 10px 0px">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 40px; padding-left: 13px;"><i class="fas fa-plus"></i></span>
+                </div>
+                <!-- Searching bar -->
+                <input id="input_add_node" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Type here to add new narratives">
+            </div>
+            <!-- The list of node narrative -->
+            <ul id="list-narrative">
+
+            </ul>
+        </nav>
+
+        <div id="content">
+            <!-- button controling the expension of navi -->
+            <nav class="navbar navbar-expand-lg navbar-color">
+                <img src="{% static "icon/expand_icon.png" %}" id="sidebarCollapse" class="btn btn-info btn-color">
+                <!-- <button type="button" id="sidebarCollapse" class="btn btn-info btn-color" icon="{% static "icon/expand_icon.png" %}">
+                    <i class="fas fa-align-justify"></i>
+                </button> -->
+            </nav>
+
+            <div id="div2">
+                <div id="story_text">Ann rang the doorbell. Mary, who was in the flat watching TV, got up from her chair and walked to the door. She was afraid. Mary looked through the keyhole. Mary saw Ann, her flatmate, at the door. Mary opened the door and asked Ann why she did not use her keys to come in the flat? Ann replied that she is upset that she did not agree to come with her at the shops. She wanted to get her up from her chair in front of the TV.</div>
+                <div id="question_text">
+                    <b>Question: </b> q(1) ?? has(ann,doorkeys)
+                    <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </div>
+
+                <div class="container-fluid" style="margin-top:5px;">
+                    <div class="row">
+                        <!-- Canvas -->
+                        <div class="col-8" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <svg id="svg_for_vis"></svg>
+                        </div>
+                        <!-- Explanation and reminder -->
+                        <div class="col text_body">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Add Node
+                                            </button>
+                                        </h6>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Click and drag a node from the sidebar and drop it onto another node on the graph. It will "precede" the node you drop it on.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h6 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Delete Node
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Double-click on a node to remove it.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h6 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Edit Node
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Double-click on the label for a node to edit it (if you need to write your own).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                        <h6 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                Relocate Node
+                                            </button>
+                                        </h6>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Ctrl+click (Cmd+click on a mac) on the node that you wish to relocate, then Ctrl+click the node that you want it to precede. All sub-nodes of the original will also be moved.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text_header align-items-center justify-content-center">
+                                <p>Dialogue Window</p>
+                            </div>
+                            <div  id="text_explain"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="container" style="text-align:center;">
+                    <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- Node Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modify the node</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="node_text" class="col-form-label">Node:</label>
+                            <input type="text" class="form-control" id="node_text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modal_save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edge Modal -->
+    <div class="modal fade" id="edgeModal" tabindex="-1" role="dialog" aria-labelledby="edgeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edgeModalLabel">Add an edge</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="Text input with dropdown button" id="edge_input">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu" id="edge_dropdown">
+                                        <button class="dropdown-item" type="button">Action</button>
+                                        <button class="dropdown-item" type="button">Another action</button>
+                                        <button class="dropdown-item" type="button">Something else here</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="edge_modal_save">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <script src="{% static "js/force-directed%20graph.js" %}"></script>-->
+    <script src="{% static "js/graph.js" %}"></script>
+    <script src="{% static "js/drag-and-drop.js" %}"></script>
+    <script src="{% static "js/modal.js" %}"></script>
+</body>
+</html>
