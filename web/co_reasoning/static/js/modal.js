@@ -7,7 +7,7 @@ $('#exampleModal').on('shown.bs.modal', function (event) {
 
 $("#modal_save").click(function () {
     var changed_text = $("#node_text").val(),
-        original_text = $(triggerElement[0]).text();;
+        original_text = $(triggerElement[0]).text();
     // last_data = $.extend(true, {}, root.data);
 
     for(var i = 0; i < nodes.length; i++){
