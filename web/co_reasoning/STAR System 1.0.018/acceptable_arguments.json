@@ -1,0 +1,135 @@
+{
+    "c(25)": {
+        "argument": [
+            "ring(ann,doorbell)=true",
+            "person(ann)=true",
+            "expect(mary,visitors)#true"
+        ],
+        "timestep": "2",
+        "conclusion": "afraid(mary)=true"
+    },
+    "p(23)": {
+        "argument": [
+            "afraid(mary)=true",
+            "in_flat(mary)=true"
+        ],
+        "timestep": "2",
+        "conclusion": "wants(mary,open(door))#true"
+    },
+    "p(24)": {
+        "argument": [
+            "walk_to(mary,door)=true",
+            "in_flat(mary)=true"
+        ],
+        "timestep": "4",
+        "conclusion": "wants(mary,find_out_who_at(door))=true"
+    },
+    "p(26)": {
+        "argument": [
+            "walk_to(mary,door)=true",
+            "in_flat(mary)=true",
+            "afraid(mary)=true"
+        ],
+        "timestep": "4",
+        "conclusion": "expect(mary,visitors)#true"
+    },
+    "c(21)": {
+        "argument": [
+            "get_up(mary,chair)=true",
+            "watch(mary,tv)=true"
+        ],
+        "timestep": "4",
+        "conclusion": "watch(mary,tv)#true"
+    },
+    "p(35)": {
+        "argument": [
+            "flatmate(mary,ann)=true",
+            "in_flat(mary)=true"
+        ],
+        "timestep": "0",
+        "conclusion": "is_a(ann,resident)=true"
+    },
+    "c(32)": {
+        "argument": [
+            "knows(mary,is_at(ann,door))=true",
+            "flatmate(mary,ann)=true"
+        ],
+        "timestep": "8",
+        "conclusion": "afraid(mary)#true"
+    },
+    "c(31)": {
+        "argument": [
+            "see_at(mary,ann,door)=true",
+            "person(ann)=true"
+        ],
+        "timestep": "7",
+        "conclusion": "knows(mary,is_at(ann,door))=true"
+    },
+    "c(33)": {
+        "argument": [
+            "see_at(mary,ann,door)=true",
+            "flatmate(mary,ann)=true"
+        ],
+        "timestep": "7",
+        "conclusion": "wants(mary,open(door))=true"
+    },
+    "c(34)": {
+        "argument": [
+            "see_at(mary,ann,door)=true",
+            "person(ann)=true"
+        ],
+        "timestep": "7",
+        "conclusion": "wants(mary,find_out_who_at(door))#true"
+    },
+    "p(52)": {
+        "argument": [
+            "refused(mary,ann,go_to(shops))=true",
+            "request(go_to(shops))=true"
+        ],
+        "timestep": "0",
+        "conclusion": "upset_with(ann,mary)=true"
+    },
+    "p(11)": {
+        "argument": [
+            "has(ann,doorkeys)=true"
+        ],
+        "timestep": "0",
+        "conclusion": "ring(ann,doorbell)#true"
+    },
+    "p(51)": {
+        "argument": [
+            "agree(mary,request_from(ann,go_to(shops)))#true"
+        ],
+        "timestep": "0",
+        "conclusion": "refused(mary,ann,go_to(shops))=true"
+    },
+    "p(13)": {
+        "argument": [
+            "is_a(ann,resident)=true"
+        ],
+        "timestep": "0",
+        "conclusion": "has(ann,doorkeys)=true"
+    },
+    "p(54)": {
+        "argument": [
+            "in_flat(mary)=true",
+            "wants(ann,punish(mary))=true"
+        ],
+        "timestep": "1",
+        "conclusion": "ring(ann,doorbell)=true"
+    },
+    "c(53)": {
+        "argument": [
+            "upset_with(ann,mary)=true"
+        ],
+        "timestep": "1",
+        "conclusion": "wants(ann,punish(mary))=true"
+    },
+    "c(41)": {
+        "argument": [
+            "open(mary,door)=true"
+        ],
+        "timestep": "9",
+        "conclusion": "wants(mary,open(door))#true"
+    }
+}

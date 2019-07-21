@@ -1,0 +1,30 @@
+% ==============================================================
+% The STAR System (for Story Comprehension)
+% Version: 1.0.018 -- Released: 10/09/2014
+% Author: Loizos Michael (loizos@ouc.ac.cy)
+% ==============================================================
+
+Installation and execution instructions:
+----------------------------------------
+
+1. Obtain SWI-Prolog (from `http://www.swi-prolog.org/`), and install it
+   following the instructions given by the application.
+
+2. Decompress and place the distributed system files into a new folder,
+   and set the newly created folder to be SWI-Prolog's working directory.
+
+3. Edit `config.pl` to define which domain file will be loaded, by setting
+   its relative path and file name as an argument to the `domain` predicate.
+
+4. In `config.pl` you may also define what information is reported by the
+   system during its execution by including the chosen options as members
+   in the list that is given as argument to the `reporting` predicate.
+
+5. Although not advisible, you may edit `config.pl` to change the domain-
+   independent priorities between the types of association statements.
+    
+6. Load "engine.pl" through SWI-Prolog, and call the predicate `start`.
+
+0. Please contact the author with any comments, questions, and bug reports.
+
+% ==============================================================
