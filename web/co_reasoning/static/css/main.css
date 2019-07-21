@@ -19,9 +19,9 @@ text {
 }
 
 .two-story-container{
+  float: left;
   display: inline-block;
   width: 50%;
-  height: 400px;
 }
 
 #div1, #div2 {
