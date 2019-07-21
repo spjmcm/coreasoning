@@ -7,6 +7,9 @@ import json, os
 def index(request):
     return render(request, 'index.html')
 
+def generalize(request):
+    return render(request, 'generalize.html')
+
 @csrf_exempt
 def get_dropped_data(request):
     # source is the node that needs to be added
