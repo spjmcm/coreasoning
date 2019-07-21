@@ -173,6 +173,10 @@ svg{
     padding: 0;
 }
 
+.canvas{
+  height: 100%;
+}
+
 #text_explain{
     background-color: rgba(0, 0, 0, 0.7);
     /*opacity: 0.7;*/
