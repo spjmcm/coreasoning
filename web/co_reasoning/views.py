@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from .models import Story
 from django.views.decorators.csrf import csrf_exempt
 import json, os
 
@@ -8,7 +9,17 @@ def index(request):
     return render(request, 'index.html')
 
 def generalize(request):
-    return render(request, 'generalize.html')
+    #get all the story object
+    try:
+        story1 = Story.objects.get(pk=1)
+        story2 = Story.objects.get(pk=2)
+    except Exception as error:
+        print('Failed to retrieve story since {}'.format(error))
+    finally:
+        print('Retrieve story{} successfully'.format(story1.story_id))
+        print('Retrieve story{} successfully'.format(story2.story_id))
+    #pass story into html
+    return render(request, 'generalize.html', {'story1': story1, 'story2': story2})
 
 @csrf_exempt
 def get_dropped_data(request):
@@ -20,7 +31,7 @@ def get_dropped_data(request):
     with open (cwd + '/co_reasoning/static/tree_data/q(1).json', 'r') as f:
         qa_data = json.load(f)
     f.close()
-    
+
     # Using dfs find target and add source into the tree
     dfs(qa_data, source, target)
 
