@@ -11,8 +11,8 @@ def index(request):
 def generalize(request):
     #get all the story object
     try:
-        story1 = Story.objects.get(pk=1)
-        story2 = Story.objects.get(pk=2)
+        story1 = stories.objects.get(pk=1)
+        story2 = Stories.objects.get(pk=2)
     except Exception as error:
         print('Failed to retrieve story since {}'.format(error))
     finally:
