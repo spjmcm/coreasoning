@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .models import Story
+from .models import Stories
 from django.views.decorators.csrf import csrf_exempt
 import json, os
 
