@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-3.3.1.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href={{css}} type='text/css'></script>
+
+
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+	<link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+</head>
+<body style="background-color: #333333">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>Congratulations!</h1>
+			<h3 id="question-guide" >You have completed the test! Now please answer these questions as the end of this survey. You answers will be confidential, and solely used for research purposes.</h3>
+
+			<div class="question q11">
+                    		<div> <p class="number" id="q11n">a</p>. <b>What is your MTurk worker ID? Make sure you type this in correctly so we know how much bonus we should give you </b></div>
+                    		<div> <input id="q11" type="text" style="width:260px"></div>
+				</div>
+
+			<div class="questions">
+			    <div class="question">
+				<div> <p class="number" id="q1n">b</p>. Which gender do you most identify with? </div>
+				<div class="answers"> <select id="q1" name="q1">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Other">Other</option>
+					<option value="Prefer not to answer">Prefer not to answer</option>
+				</select> </div>
+				</div>
+				<div class="question">
+				<div> <p class="number" id="q2n">c</p>. Which state do you live in? </div>
+				<div class="answers"> <select id="q2" name="q2">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+                    <option value="AL">Alabama(AL)</option>
+                    <option value="AK">Alaska(AK)</option>
+                    <option value="AZ">Arizona(AZ)</option>
+                    <option value="AR">Arkansas(AR)</option>
+                    <option value="CA">California(CA)</option>
+                    <option value="CO">Colorado(CO)</option>
+                    <option value="CT">Connecticut(CT)</option>
+                    <option value="DE">Delaware(DE)</option>
+                    <option value="FL">Florida(FL)</option>
+                    <option value="GA">Georgia(GA)</option>
+                    <option value="HI">Hawaii(HI)</option>
+                    <option value="IA">Idaho(IA)</option>
+                    <option value="IL">Illinois(IL)</option>
+                    <option value="IN">Indiana(IN)</option>
+                    <option value="IA">Iowa(IA)</option>
+                    <option value="KS">Kansas(KS)</option>
+                    <option value="KY">Kentucky(KY)</option>
+                    <option value="LA">Louisiana(LA)</option>
+                    <option value="ME">Maine(ME)</option>
+                    <option value="MD">Maryland(MD)</option>
+                    <option value="MA">Massachusetts(MA)</option>
+                    <option value="MI">Michigan(MI)</option>
+                    <option value="MN">Minnesota(MN)</option>
+                    <option value="MS">Mississippi(MS)</option>
+                    <option value="MO">Missouri(MO)</option>
+                    <option value="MT">Montana(MT)</option>
+                    <option value="NE">Nebraska(NE)</option>
+                    <option value="NV">Nevada(NV)</option>
+                    <option value="NH">New hampshire(NH)</option>
+                    <option value="NJ">New jersey(NJ)</option>
+                    <option value="NM">New mexico(NM)</option>
+                    <option value="NY">New York(NY)</option>
+                    <option value="NC">North Carolina(NC)</option>
+                    <option value="ND">North Dakota(ND)</option>
+                    <option value="OH">Ohio(OH)</option>
+                    <option value="OK">Oklahoma(OK)</option>
+                    <option value="OR">Oregon(OR)</option>
+                    <option value="PA">Pennsylvania(PA)</option>
+                    <option value="RI">Rhode island(RI)</option>
+                    <option value="SC">South carolina(SC)</option>
+                    <option value="SD">South dakota(SD)</option>
+                    <option value="TN">Tennessee(TN)</option>
+                    <option value="TX">Texas(TX)</option>
+                    <option value="UT">Utah(UT)</option>
+                    <option value="VT">Vermont(VT)</option>
+                    <option value="VA">Virginia(VA)</option>
+                    <option value="WA">Washington(WA)</option>
+                    <option value="WV">West Virginia(WV)</option>
+                    <option value="WI">Wisconsin(WI)</option>
+                    <option value="WY">Wyomin(WY)</option>
+		    <option value="N/A">Outside US</option>
+				</select> </div>
+				</div>
+				<div class="question">
+				<div> <p class="number" id="q3n">d</p>. What is your education level? </div>
+				<div class="answers"> <select id="q3" name="q3">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="Below High School">Below High School</option>
+					<option value="High School">High School</option>
+					<option value="Some college">Some college</option>
+					<option value="2 year college degree">2 year college degree</option>
+                    <option value="4 year college degree">4 year college degree</option>
+                    <option value="Master’s degree">Master’s degree</option>
+                    <option value="Professional Degree">Professional Degree</option>
+					<option value="Doctorate">Doctorate</option>
+				</select> </div>
+				</div>
+				<div class="question">
+				<div> <p class="number" id="q4n">e</p>. Please rate your attitude towards Liberal Arts. </div>
+				<div class="answers"> <select id="q4" name="q4">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="Strongly like">Strongly like</option>
+					<option value="Like">Like</option>
+					<option value="Neither like nor dislike">Neither like nor dislike</option>
+					<option value="Dislike">Dislike</option>
+					<option value="Strongly Dislike">Strongly Dislike</option>
+				</select> </div>
+				</div>
+
+				<div class="question">
+				<div> <p class="number" id="q5n">f</p>. Please rate your attitude towards Science. </div>
+				<div class="answers"> <select id="q5" name="q5">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="Strongly like">Strongly like</option>
+					<option value="Like">Like</option>
+					<option value="Neither like nor dislike">Neither like nor dislike</option>
+					<option value="Dislike">Dislike</option>
+					<option value="Strongly Dislike">Strongly Dislike</option>
+				</select> </div>
+				</div>
+
+                <div class="question">
+				<div> <p class="number" id="q6n">g</p>. How strongly do you associate Mathematics with males and females? </div>
+				<div class="answers"> <select id="q6" name="q6">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="strongly male">strongly male</option>
+					<option value="moderately male">moderately male</option>
+					<option value="slightly male">slightly male</option>
+					<option value="neither male nor female">neither male nor female</option>
+					<option value="slightly female">slightly female</option>
+					<option value="moderately female">moderately female</option>
+					<option value="strongly female">strongly female</option>
+				</select> </div>
+				</div>
+
+                <div class="question">
+				<div> <p class="number" id="q7n">h</p>. How strongly do you associate Liberal Arts with males and females? </div>
+				<div class="answers"> <select id="q7" name="q7">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="strongly male">strongly male</option>
+					<option value="moderately male">moderately male</option>
+					<option value="slightly male">slightly male</option>
+					<option value="neither male nor female">neither male nor female</option>
+					<option value="slightly female">slightly female</option>
+					<option value="moderately female">moderately female</option>
+					<option value="strongly female">strongly female</option>
+				</select> </div>
+				</div>
+
+		<div class="question">
+				<div> <p class="number" id="q9n">i</p>. Think about the workers you previously chose between. What kind of tasks did they do? </div>
+				<div class="answers"> <select id="q9" name="q9">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="Math">Math</option>
+					<option value="Science">Science</option>
+					<option value="Liberal Arts">Liberal Arts</option>
+					<option value="Other">Other</option>
+				</select> </div>
+				</div>
+
+		<!-- Delete the belief-ralated question		 -->
+
+		<!-- <div class="question">
+				<div> <p class="number" id="q12n">j</p>. Suppose we were to randomly choose a male worker in our study. You do not know the first round performance of this worker. How many problems do you think the worker would solve correctly in the second round? </div>
+				<div class="answers"> <select id="q12" name="q12">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="more than 25">more than 25</option>
+				</select> </div>
+				</div>
+		<br>
+		<div class="question">
+				<div> <p class="number" id="q13n">k</p>. Suppose we were to randomly choose a female worker in our study. You do not know the first round performance of this worker. How many problems do you think the worker would solve correctly in the second round? </div>
+				<div class="answers"> <select id="q13" name="q13">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="more than 25">more than 25</option>
+				</select> </div>
+				</div>
+		<br>
+		<div class="question">
+				<div> <p class="number" id="q14n">l</p>. Suppose we were to randomly choose a male worker in our study. In the first round, the worker solved 11 problems correctly. How many problems do you think the worker would solve correctly in the second round? </div>
+				<div class="answers"> <select id="q14" name="q14">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="more than 25">more than 25</option>
+				</select> </div>
+				</div>
+		<br>
+		<div class="question">
+				<div> <p class="number" id="q15n">m</p>. Suppose we were to randomly choose a female worker in our study. In the first round, the worker solved 11 problems correctly. How many problems do you think the worker would solve correctly in the second round? </div>
+				<div class="answers"> <select id="q15" name="q15">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="more than 25">more than 25</option>
+				</select> </div>
+				</div> -->
+
+				<br>
+				<div class="question" id="q8q">
+				<div> <p class="number" id="q8n">j</p>.	Women hold a smaller portion of the mathematics, science and engineering faculty positions at top research universities than do men. The following factors are sometimes offered as reasons for this difference. Please rate to what extent you agree that each reason is important.
+               			</div>
+
+
+
+                    <div class="question qs" id="q8q1q">
+                    <div> <p class="number" id="q8q1n">i</p>.Different proportions of men and women are found among people with the very highest levels of math ability.</div>
+                    <div class="answers">
+                        <label><input name="q8q1" id="q8q1a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q1" id="q8q1a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q1" id="q8q1a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q1" id="q8q1a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q1" id="q8q1a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q2q">
+                    <div> <p class="number" id="q8q2n">ii</p>.On average, men and women differ in their willingness to devote the time required by such "high-powered" positions. </div>
+                    <div class="answers">
+                        <label><input name="q8q2" id="q8q2a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q2" id="q8q2a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q2" id="q8q2a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q2" id="q8q2a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q2" id="q8q2a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q3q">
+                    <div> <p class="number" id="q8q3n">iii</p>. On average, men and women differ naturally in their scientific interest. </div>
+                    <div class="answers">
+                        <label><input name="q8q3" id="q8q3a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q3" id="q8q3a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q3" id="q8q3a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q3" id="q8q3a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q3" id="q8q3a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q4q">
+                    <div> <p class="number" id="q8q4n">iv</p>. On average, men and women differ in their willingness to spend time away from their families. </div>
+                    <div class="answers">
+                        <label><input name="q8q4" id="q8q4a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q4" id="q8q4a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q4" id="q8q4a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q4" id="q8q4a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q4" id="q8q4a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q5q">
+                    <div> <p class="number" id="q8q5n">v</p>. Directly or indirectly, boys and girls tend to receive different levels of encouragement for developing scientific interest. </div>
+                    <div class="answers">
+                        <label><input name="q8q5" id="q8q5a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q5" id="q8q5a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q5" id="q8q5a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q5" id="q8q5a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q5" id="q8q5a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q6q">
+                    <div> <p class="number" id="q8q6n">vi</p>. On average, whether consciously or unconsciously, men are favored in hiring and promotion. </div>
+                    <div class="answers">
+                        <label><input name="q8q6" id="q8q6a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q6" id="q8q6a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q6" id="q8q6a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q6" id="q8q6a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q6" id="q8q6a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q7q">
+                    <div> <p class="number" id="q8q7n">vii</p>. I do not read the questions in this survey. </div>
+                    <div class="answers">
+                        <label><input name="q8q7" id="q8q7a1" type="radio" value="a1" />strongly agree </label>
+                        <label><input name="q8q7" id="q8q7a2" type="radio" value="a2" />agree </label>
+                        <label><input name="q8q7" id="q8q7a3" type="radio" value="a3" />neutral </label>
+                        <label><input name="q8q7" id="q8q7a4" type="radio" value="a4" />disagree </label>
+                        <label><input name="q8q7" id="q8q7a5" type="radio" value="a5" />strongly disagree </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q8q">
+                    <div> <p class="number" id="q8q8n">viii</p>. Suppose that ten 9th-grade boys were picked at random from a typical U.S. high school. How many would you predict will complete a calculus course before finishing high school? </div>
+                    <div class="answers">
+                        <label><input name="q8q8" id="q8q8a0" type="radio" value="a0" />0 </label>
+                        <label><input name="q8q8" id="q8q8a1" type="radio" value="a1" />1 </label>
+                        <label><input name="q8q8" id="q8q8a2" type="radio" value="a2" />2 </label>
+                        <label><input name="q8q8" id="q8q8a3" type="radio" value="a3" />3 </label>
+                        <label><input name="q8q8" id="q8q8a4" type="radio" value="a4" />4 </label>
+                        <label><input name="q8q8" id="q8q8a5" type="radio" value="a5" />5 </label>
+                        <label><input name="q8q8" id="q8q8a6" type="radio" value="a6" />6 </label>
+                        <label><input name="q8q8" id="q8q8a7" type="radio" value="a7" />7 </label>
+                        <label><input name="q8q8" id="q8q8a8" type="radio" value="a8" />8 </label>
+                        <label><input name="q8q8" id="q8q8a9" type="radio" value="a9" />9 </label>
+                        <label><input name="q8q8" id="q8q8a10" type="radio" value="a10" />10 </label>
+                    </div>
+                    </div>
+
+                    <div class="question qs" id="q8q9q">
+                    <div> <p class="number" id="q8q9n">ix</p>. Suppose that ten 9th-grade girls were picked at random from a typical U.S. high school. How many would you predict will complete a calculus course before finishing high school? </div>
+                    <div class="answers">
+                        <label><input name="q8q9" id="q8q9a0" type="radio" value="a0" />0 </label>
+                        <label><input name="q8q9" id="q8q9a1" type="radio" value="a1" />1 </label>
+                        <label><input name="q8q9" id="q8q9a2" type="radio" value="a2" />2 </label>
+                        <label><input name="q8q9" id="q8q9a3" type="radio" value="a3" />3 </label>
+                        <label><input name="q8q9" id="q8q9a4" type="radio" value="a4" />4 </label>
+                        <label><input name="q8q9" id="q8q9a5" type="radio" value="a5" />5 </label>
+                        <label><input name="q8q9" id="q8q9a6" type="radio" value="a6" />6 </label>
+                        <label><input name="q8q9" id="q8q9a7" type="radio" value="a7" />7 </label>
+                        <label><input name="q8q9" id="q8q9a8" type="radio" value="a8" />8 </label>
+                        <label><input name="q8q9" id="q8q9a9" type="radio" value="a9" />9 </label>
+                        <label><input name="q8q9" id="q8q9a10" type="radio" value="a10" />10 </label>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <div class="question q10">
+                    <div> <p class="number" id="q10n">k</p>. Do you have any comments about this HIT? </div>
+                    <div> <textarea id="q10" col="70" row="10" style="width:670px;height:80px; margin=0px;"> </textarea></div>
+				</div>
+			</div>
+			<a href="#" class="btn btn-lg btn-success" style="margin-top: 100px; margin-bottom: 25px;" id="question-button">Submit</a>
+			<div id="warning"> Please answer these questions, <br/> this is the last step! </div>
+		</div>
+	</div>
+</body>
+
+<script src="{{ours_js}}?v={{version}}"></script>
+<script src="{{question_js}}?v={{version}}"></script>
+</html>

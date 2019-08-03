@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+
+        <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script>
+    window.location.hash="no-back-button";
+    window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+    window.onhashchange=function(){window.location.hash="no-back-button";}
+  </script>
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css" integrity="sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../static/evaluater.css">
+
+  <link href="../static/lightbox.css" rel="stylesheet">
+
+        <style>
+          .hidden{
+            display: invisible;
+          };
+
+          #dist_img{
+            font-family: font-family: 'Sarabun', sans-serif;
+            font-size: 10;
+            text-align: center;
+          }
+
+          .row.display-flex {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .thumbnail {
+            height: 100%;
+          }
+        </style>
+    </head>
+
+    <body>
+      <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <div class="container">
+            <!--        progress bar-->
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="setup_progress_bar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%; min-width: 2em"">
+                {{progress}}%
+                </div>
+            </div>
+
+            <center><a href="../static/easy_part_dist.png" data-lightbox="image-1" data-title="Distribution" style="font-size: 30px; font-weight: 100;" id="dist_img">Click to review the distribution</a></center>
+
+            <div class="row display-flex">
+              <div id="person-1">
+                  <div class="thumbnail">
+                      <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-1">
+                      <div class="caption">
+                          <div class="bios" id="person-text-1">
+                              <p class="text-left">Text here <br/> Another text here </p>
+                          </div>
+                      </div>
+                      <div class="row" style="margin: auto;">
+                          <p id="question_description-1">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                          <select id="dropdown-1"  style="width: 100px;">
+          									<option value="default">select</option>
+          									<option value="0">0</option>
+          									<option value="1">1</option>
+          									<option value="2">2</option>
+          									<option value="3">3</option>
+          									<option value="4">4</option>
+          									<option value="5">5</option>
+          								</select>
+                      <div id="warning1" class="warning col-sm-12"> Please make a prediction selection. </div>
+                      </div>
+                      <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" worker="1" role="button" id="chooser_button_1">Select Me</a></p>
+                  </div>
+              </div>
+
+                <!-- worker 2 -->
+                <div id="person-2">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-2">
+                        <div class="caption">
+                            <div class="bios" id="person-text-2">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-2">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-2"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning2" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" worker="2" role="button" id="chooser_button_2">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-3">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-3">
+                        <div class="caption">
+                            <div class="bios" id="person-text-3">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-3">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-3"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning3" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_3" worker="3" role="button">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-4">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-4">
+                        <div class="caption">
+                            <div class="bios" id="person-text-4">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-4">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-4"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning4" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_4" worker="4" role="button">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-5">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-5">
+                        <div class="caption">
+                            <div class="bios" id="person-text-5">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-5">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-5"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning5" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_5" worker="5" role="button">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-6">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-6">
+                        <div class="caption">
+                            <div class="bios" id="person-text-6">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-6">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-6"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning6" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_6" worker="6" role="button">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-7">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-7">
+                        <div class="caption">
+                            <div class="bios" id="person-text-7">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-7">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-7"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning7" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_7" worker="7" role="button">Select Me</a></p>
+                    </div>
+                </div>
+
+                <div id="person-8">
+                    <div class="thumbnail">
+                        <img src="../static/worker_icon/AF-229.jpg" class="icon" id="icon-8">
+                        <div class="caption">
+                            <div class="bios" id="person-text-8">
+                                <p class="text-left">Text here <br/> Another text here </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin: auto;">
+                            <p id="question_description-8">How many questions do you think this worker will answer correctly in the 2nd round?</p>
+                            <select id="dropdown-8"  style="width: 100px;">
+            									<option value="default">select</option>
+            									<option value="0">0</option>
+            									<option value="1">1</option>
+            									<option value="2">2</option>
+            									<option value="3">3</option>
+            									<option value="4">4</option>
+            									<option value="5">5</option>
+            								</select>
+                            <div id="warning8" class="warning col-sm-12"> Please make a prediction selection. </div>
+                        </div>
+                        <p style="margin-top: 5px; text-align: center;"><a href="pre_trials.html" class="btn btn-primary button" id="chooser_button_8" worker="8" role="button">Select Me</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+          var data = {{first_time|tojson|safe}}
+          var person_number = {{worker_num}}
+          var display_condition = {{display_condition}}
+          var sequence_pos = {{sequence_pos}}
+          console.log(data)
+        </script>
+
+        <script src="http://d3js.org/d3.v3.js"></script>
+        <script src="{{ours_js}}?v={{version}}"></script>
+        <script src="{{radar_js}}?v={{version}}"></script>
+        <script src="../static/lightbox.js"></script>
+        <!-- <script src={{flying_js}}></script> -->
+        <!-- <script src={{d3}}></script> -->
+
+    </body>
+</html>

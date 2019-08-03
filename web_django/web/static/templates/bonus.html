@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-1.12.0.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href='{{css}}'></script>
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+    <link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+
+    <style>
+	p {
+        text-align: left;
+	font-size: 150%;
+    }
+    .question {
+        height: auto;
+    }
+    td {
+        margin-left: 20px;
+        width: 30%;
+        height: 30px;
+    }
+    </style>
+
+</head>
+<body style="background-color: #333333">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>Your Bonus</h1>
+            <p>The workers you selected answered {{average_qansII}} questions correctly on average in <strong>Round 2</strong>. Hence you will receive a bonus of <b>$ {{bonus}}</b>.”</p>
+						<table style="text-align:center; width:100%">
+			 		 <tr>
+			 						 <td width="30%">The average number of questions that the workers you choose answer correctly</td>
+			 						 <td width="30%">Your earnings</td>
+			 			 <td width="30%">Number (and Proportion) of the workers who answered correctly in this range</td>
+			 					 </tr>
+			 		 <tr>
+			 						 <td width="30%">&lt;0.5 question</td>
+			 						 <td width="30%">$0</td>
+			 			 <td width="30%">20 (19%)</td>
+			 					 </tr>
+			 		 <tr>
+			 						 <td width="30%">0.5-1 questions</td>
+			 						 <td width="30%">$1.0</td>
+			 			 <td width="30%">36 (34%)</td>
+			 					 </tr>
+			 					 <tr>
+			 						 <td width="30%">1-2 questions</td>
+			 						 <td width="30%">$2.0</td>
+			 			 <td width="30%">27 (25%)</td>
+			 					 </tr>
+			 		 <tr>
+			 						 <td width="30%">2-3 questions</td>
+			 						 <td width="30%">$3.0</td>
+			 			 <td width="30%">16 (15%)</td>
+			 					 </tr>
+			 					 <tr>
+			 						 <td width="30%">3-4 questions</td>
+			 						 <td width="30%">$4.0</td>
+			 			 <td width="30%">8 (6%)</td>
+			 					 </tr>
+			 		 <tr>
+			 						 <td width="30%">4-5 questions</td>
+			 						 <td width="30%">$5.0</td>
+			 			 <td width="30%">1 (0.9%)</td>
+			 					 </tr>
+			 		</table>
+
+	    <a class="btn btn-lg btn-success" style="margin-top: 25px; margin-bottom: 25px;" id="question-button">Ok, Continue</a>
+            <div id="warning"> Please read the instruction and answer the questions correctly. </div>
+		</div>
+	</div>
+</body>
+
+<script>
+$('#question-button').on('click', function(e) {
+	e.preventDefault();
+  window.location = "confirm.html";
+});
+</script>
+
+
+
+</html>

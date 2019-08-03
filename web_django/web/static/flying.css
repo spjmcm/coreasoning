@@ -1,0 +1,62 @@
+#flying-container{
+
+}
+
+@keyframes flying{
+	0%   {left: -50px}
+	100%  {left: 2450px}
+}
+@-moz-keyframes flying{
+	0%   {left: -50px}
+	100%  {left: 2450px}
+}
+@-webkit-keyframes flying{
+	0%   {left: -50px}
+	100%  {left: 2450px}
+}
+@-o-keyframes flying{
+	0%   {left: -50px}
+	100%  {left: 2450px}
+}
+@keyframes fadeout{
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@-moz-keyframes fadeout{
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@-webkit-keyframes fadeout{
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@-o-keyframes fadeout{
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+
+.flying{
+	margin-top: 0;
+	margin-bottom: 0;
+	position:fixed;
+	left:-50px;
+	z-index: 1;
+}
+
+#flying-line-1{
+	bottom:65px;
+}
+
+#flying-line-2{
+	bottom:40px;
+}
+
+#flying-line-3{
+	bottom:15px;
+}
+
+.flying > p{
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+}

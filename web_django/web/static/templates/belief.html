@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-1.12.0.min.js"></script>
+    <script src="../static/within_ours.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href='{{css}}'></script>
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+    <link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+
+    <style>
+	p {
+        text-align: left;
+    }
+    .question {
+        height: auto;
+    }
+    td {
+        margin-left: 20px;
+        width: 30%;
+        height: 30px;
+    }
+    </style>
+
+</head>
+<body style="background-color: #333333">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>Making prediction for employees' performance</h1>
+			<p> You will guess employees' performance on easy and hard quiz based on the samples.</p>
+      <!--p> You will receive extra bonus based on how close your predictions are to the real average performance.</p -->
+
+	    		<table style="margin-top: 20px;">
+				<tr>
+				  <td>
+				    <div >
+					    <p style="text-align:center;"> <b>Easy Quiz Sample </b></p>
+					<img src="{{qshot}}" class="img-responsive" style="max-width: 100%; margin: auto;" alt="question screenshot"/>
+				    </div>
+				  </td>
+				</tr>
+        			<tr>
+				  <td>
+				    <div >
+					<p style="text-align:center;"> <b>Hard Quiz Sample </b></p>
+					<img src="{{qshot1}}" class="img-responsive" style="max-width: 100%; margin: auto;" alt="question screenshot"/>
+				    </div>
+				  </td>
+				</tr>
+			</table>
+
+
+                <div class="question">
+				<div> <p class="number" id="b1n">1</p>. How many questions do you think a female worker can answer correctly in the easy quiz? </div>
+				<div class="answers"> <select id="b1" name="b1">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select> <br></div>
+				</div>
+
+		<div class="question">
+				<div> <p class="number" id="b2n">2</p>. How many questions do you think a male worker can answer correctly in the easy quiz? </div>
+				<div class="answers"> <select id="b2" name="b2">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select> <br></div>
+				</div>
+
+		<div class="question">
+				<div> <p class="number" id="b3n">3</p>. How many questions do you think a female worker can answer correctly in the hard quiz? </div>
+				<div class="answers"> <select id="b3" name="b3">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select> <br></div>
+				</div>
+
+		<div class="question">
+				<div> <p class="number" id="b4n">4</p>. How many questions do you think a male worker can answer correctly in the hard quiz? </div>
+				<div class="answers"> <select id="b4" name="b4">
+					<option value="default" selected="<Choose an answer>"><Choose an answer></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select> </div>
+				</div>
+
+	    <a class="btn btn-lg btn-success" style="margin-top: 25px; margin-bottom: 25px;" id="belief-button">Ok, Continue</a>
+            <div id="warning"> Please read the instruction and answer the questions correctly. </div>
+
+		</div>
+	</div>
+</body>
+
+<script>
+	$('#belief-button').on('click', function(e) {
+	e.preventDefault();
+	b1 = $('#b1').val();
+	b2 = $('#b2').val();
+	b3 = $('#b3').val();
+	b4 = $('#b4').val();
+	data = {b1:b1, b2:b2, b3:b3, b4:b4};
+	$.ajax({url: "savebelief", data: data, type: "POST",
+	error: function(result) {
+		console.log('Error on ajax return -- post')
+		window.location = "pre_evaluater.html";
+	},
+	success: function(next_data) {
+		console.log('Sucessful Ajax return -- post')
+		console.log(next_data)
+		window.location = "pre_evaluater.html";
+	}})
+});
+</script>
+
+</html>

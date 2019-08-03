@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-1.12.0.min.js"></script>
+		<script src="../static/pre_evaluater.js"></script>
+		<script>
+			var dist_condition = {{display_condition}};
+		</script>
+		<!-- <script type="text/javascript">
+             window.history.forward();
+             function noBack() {
+                  window.history.forward();
+             }
+    </script> -->
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href='{{css}}'></script>
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+    <link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+</head>
+<body style="background-color: #333333" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>Now let us get started!</h1>
+			<div id="display_distribution">
+				<p style="text-align: left;">Following graph informs you of the distribution of workers' performance in Round 1. Please look at this distrbution carefully which may help you to make hiring decision. The blue histogram is the round 1 performance distribution of male workers, and red histogram is for female workers. For example, there are 12 men and 17 women answered 2 questions correctly in round 1. </p>
+				<img src="../static/easy_part_dist.png" alt="Here is the distribution of performance" height="500px" width="600px">
+			</div>
+			<!-- <ol>
+			<p style="font-size: 1.5em; text-align: center">You will now make hiring decisions. <b>Remember that you need to choose between {{worker_num}} and a random worker from the candidate pool. </b> </p>
+			</ol> -->
+			<br>
+			<a href="evaluater.html" class="btn btn-lg btn-success" style="margin-top: 25px; margin-bottom: 25px;">Ok, Continue</a>
+		</div>
+	</div>
+</body>
+</html>

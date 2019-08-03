@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-1.12.0.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href='{{css}}'></script>
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+    <link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+
+    <style>
+	p {
+        text-align: left;
+    }
+    .question {
+        height: auto;
+    }
+    </style>
+
+</head>
+<body style="background-color: #333333">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>What tasks did workers do?</h1>
+      <p> <strong>You will see some information about the workers to help you make the hiring decision.</strong> </p>
+	    <p>These workers have already participated in two rounds of tasks.</p>
+	    <p> These workers were required to answer 5 <strong>easy</strong> SAT math questions in <strong>Round 1</strong> and another 5 <strong>hard</strong> SAT math questions in <strong>Round 2</strong>. <strong>Workers were incentivized to answer as many correct questions as possible</strong>. In other words, they were paid more if they answered more questions correctly. They had five minutes available for each round of the task, and were not allowed to use a calculator.</p>
+	    <p> You may or may not receive information on how well the workers performed in <strong>Round 1</strong>, your job is to predict who performed the best in <strong>Round 2</strong>. And your payment will be determined by how the workers you choose actually performed in <strong>Round 2</strong>. </p>
+			<p> To have a better understanding of the workers’ task , please see the sample question they were asked below.</p>
+						<!-- <p> Their point score was calculated as follows: </p>
+            <p> -           They will receive 5 cents as base payment. </p>
+						<p> - 					No payment for each incorrect answer. </p>
+            <p> -           They will receive 20 cents for each correct answer in first easy part, and 25 cents for each correct answer in second hard part. </p> -->
+            <p style="margin-top: 10px; font-size: 1.2em"> To have a better understanding of the task, please see the sample question they were asked below. </p>
+            <table style="margin-top: 20px;">
+				<tr>
+					<td>
+						<div >
+							<img src="{{qshot}}" class="img-responsive" style="max-width: 100%; margin: auto;" alt="question screenshot"/>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+					<p style="margin-top: 10px; font-size: 1.2em">To test your basic understanding of workers' task, please answer the following question:</p>
+            <div class="question" id="q1q">
+            <div> <p class="number" id="q1n">1</p>. How many questions they need to answer in each round? </div>
+            <div class="answers">
+                <label><input name="q1" id="q1a1" type="radio" value="a1" />a. Two </label>
+                <label><input name="q1" id="q1a2" type="radio" value="a2" />b. Three </label>
+                <label><input name="q1" id="q1a3" type="radio" value="a3" />c. Four </label>
+                <label><input name="q1" id="q1a4" type="radio" value="a4" />d. Five </label>
+            </div>
+            </div>
+
+            <!-- <div class="question" id="q2q">
+            <div> <p class="number" id="q2n">2</p>. How much a worker will receive if he/she answers 2 easy questions and 3 hard questions correctly? </div>
+            <div class="answers">
+                <label><input name="q2" id="q2a1" type="radio" value="a1" />a. $1.20 </label>
+                <label><input name="q2" id="q2a2" type="radio" value="a2" />b. $1.15 </label>
+            </div>
+            </div> -->
+
+			<a class="btn btn-lg btn-success" style="margin-top: 25px; margin-bottom: 25px;" id="question-button">Ok, Continue</a>
+            <div id="warning"> Please read the instruction and answer the questions correctly. </div>
+
+		</div>
+	</div>
+</body>
+
+<script>
+first_right = 1
+$('#question-button').on('click', function(e) {
+	e.preventDefault();
+	q1 = $('#q1a4');
+	// q2 = $('#q2a1');
+    // if (q1[0].checked && q2[0].checked) {
+		if (q1[0].checked) {
+        window.location = "attention.html?first="+first_right;
+    }
+    else {
+        $('#warning').css("visibility", "visible");
+	    first_right = 0
+    }
+});
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="../static/jquery-1.12.0.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href='{{css}}'></script>
+	<!-- from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ -->
+
+    <link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+
+    <style>
+	p {
+        text-align: left;
+    }
+    .question {
+        height: auto;
+    }
+    td {
+        margin-left: 20px;
+        width: 30%;
+        height: 30px;
+    }
+    </style>
+
+</head>
+<body style="background-color: #333333">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10 brand">
+			<h1>Hiring Decisions</h1>
+			<p> You’ll make a total of 12 hiring decisions. For each hiring decision, you are going to guess which worker performed best in the 2nd round among {{num_worker}} candidates, and you are required to: </p>
+			<ol type="1" style="text-align: left;">
+				<li>Guess the number of correct answers each workers made in Round 2</li>
+				<li>Pick the most promising worker</li>
+			</ol>
+			<p style="margin-top: 10px;">Below is the example of one hiring trial:</p>
+	    		<table style="margin-top: 20px;">
+				<tr>
+				  <td>
+				    <div >
+					<img src="{{qshot}}" class="img-responsive" style="max-width: 100%; margin: auto;" alt="question screenshot"/>
+				    </div>
+				  </td>
+				</tr>
+			</table>
+
+
+	    <div class="question" id="q3q">
+	    <div> <p class="number" id="q3n">1</p>. Which round of workers’’ performance you are going to guess?</div>
+	    <div class="answers">
+		<label><input name="q3" id="q3a1" type="radio" value="a1" />a. Round 1 </label> <br>
+		<label><input name="q3" id="q3a2" type="radio" value="a2" />b. Round 2 </label>
+	    </div>
+	    </div>
+
+	   <!-- <div class="question" id="q4q">
+	    <div> <p class="number" id="q4n">2</p>. To help you make your hiring decisions, you may be provided with information on the scores from which round of math questions? </div>
+	    <div class="answers">
+		<label><input name="q4" id="q4a1" type="radio" value="a1" />a. Round 1 of math questions </label> <br>
+		<label><input name="q4" id="q4a2" type="radio" value="a2" />b. Round 2 of math questions </label>
+	    </div>
+	    </div> -->
+
+	   <div class="question" id="q5q">
+	    <div> <p class="number" id="q5n">2</p>. How many hiring choices you are going to make? </div>
+	    <div class="answers">
+		<label><input name="q5" id="q5a1" type="radio" value="a1" />a. 12 </label> <br>
+		<label><input name="q5" id="q5a2" type="radio" value="a2" />b. 15 </label>
+	    </div>
+	    </div>
+
+	    <a class="btn btn-lg btn-success" style="margin-top: 25px; margin-bottom: 25px;" id="question-button">Ok, Continue</a>
+            <div id="warning"> Please read the instruction and answer the questions correctly. </div>
+
+		</div>
+	</div>
+</body>
+
+<script>
+$('#question-button').on('click', function(e) {
+	e.preventDefault();
+	q3 = $('#q3a2');
+	q5 = $('#q5a1');
+    if (q3[0].checked & q5[0].checked) {
+        window.location = "decision.html";
+    }
+    else {
+        $('#warning').css("visibility", "visible");
+    }
+});
+</script>
+
+</html>

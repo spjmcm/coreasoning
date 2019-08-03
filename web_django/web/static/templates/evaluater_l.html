@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href={{css}} type='text/css'></script>
+	<link rel="stylesheet" href={{flying_css}} type='text/css'></script>
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	
+	<link rel="stylesheet" type="text/css" href="../static/ours.css" />
+
+	<style>
+	body {
+	  padding: 20px;
+	}
+
+	.radar-chart .area {
+	  fill-opacity: 1.0;
+	}
+	.radar-chart.focus .area {
+	  fill-opacity: 0.3;
+	}
+
+	.area.stars, .stars{
+	  fill: #FFD700;
+	  stroke: none;
+	}
+	.area.negative_space, .negative_space .circle {
+	  fill: #2a0141;
+	  fill-opacity: 0.7;
+	  stroke: none;
+	}
+
+	.axis line{
+		opacity: 0.4;
+	}
+	</style>
+
+
+</head>
+<body>
+
+
+	<div id="comparison-container" class="container">
+		<div id = "bg-out" class="brand-bgcolor">   <!-- style="padding-top: 20px; padding-bottom: 5px;"> -->
+			<div class="progress brand-bgcolor" style="width: 100%;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%; min-width: 2em">
+					{{progress}}%
+				</div>
+			</div>
+		</div>
+		
+		<div class="user-profile" id="comparison-half-1">
+			<div class="photo-and-review">
+				<div class="user-photo" id="comparison-img-1">
+					<div id="image_div"  class="img-responsive" style="vertical-align: middle; background-image: url(static/default.png); background-position: center;"> </div>
+					<!-- <img src="static/default.png" alt="..." id="image_circ"  class="img-responsive" class="img-circle"> -->
+				</div>
+				<div>
+					<p class="review-title"> Bio </p>
+				</div>
+			</div>
+			<div class="user-content">
+				<div class="user-up">
+					<div class="profile-and-rating">
+						<div id="comparison-title-1">
+							<h2> then a title</h2>
+						</div>
+						<div id="comparison-viz-1" class="stars">
+						<!-- <img src="static/starparts/10.png" alt="Rating unavailable" id='nostars'> -->
+						<p id='norating'>No Rating Available</p>
+						</div>
+					</div>
+					<div class="hourly-rate">
+						<div class="hourly-first-row">Hourly rate</div>
+						<div class="hourly-second-row">
+							<h1> $30 </h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="user-down">
+					<div class="bios" id="comparison-text-1">
+						<p class="text-left">Profile text here</p>
+					</div>
+					
+					<div class="button">
+						<button class="btn btn-info" id="chooser_button_1_up">
+							<div class="chooser-button" id="chooser_button_1">Select</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="user-profile" id="comparison-half-2">
+			<div class="photo-and-review">
+				<div class="user-photo" id="comparison-img-2">
+					<div id="image_div"  class="img-responsive" style="vertical-align: middle; background-image: url(static/default.png); background-position: center;"> </div>
+					<!-- <img src="static/default.png" alt="..." id="image_circ"  class="img-responsive" class="img-circle"> -->
+				</div>
+				<div>
+					<p class="review-title"> Bio </p>
+				</div>
+			</div>
+			<div class="user-content">
+				<div class="user-up">
+					<div class="profile-and-rating">
+						<div id="comparison-title-2">
+							<h2> then a title</h2>
+						</div>
+						<div id="comparison-viz-2" class="stars">
+						<!-- <img src="static/starparts/10.png" alt="Rating unavailable" id='nostars'> -->
+						<p id='norating'>No Rating Available</p>
+						</div>
+					</div>
+					<div class="hourly-rate">
+						<div class="hourly-first-row">Hourly rate</div>
+						<div class="hourly-second-row">
+							<h1> $30 </h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="user-down">
+					<div class="bios" id="comparison-text-2">
+						<p class="text-left">Profile text here</p>
+					</div>
+					
+					<div class="button">
+						<button class="btn btn-info" id="chooser_button_2_up">
+							<div class="chooser-button" id="chooser_button_2">Select</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="dialog-close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirm</h4>
+      </div>
+      <div class="modal-body">You are about to choose <p id="worker-name-dialog" style="display: inline"> Name </p> <br />Write the rationale for it!</div>
+			<textarea class="form-control" id="rationale" rows="4" placeholder="Enter the rationale..."></textarea>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="dialog-confirm">Confirm</button>
+        <button type="button" class="btn btn-default" id="dialog-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+  <div id="flying-container">
+		<div id="flying-line-1" class="flying">
+      <p id="flying-text-1"> Flying text 1 </p>
+		</div>
+		<div id="flying-line-2" class="flying">
+      <p id="flying-text-2"> Flying text 2 </p>
+		</div>
+		<div id="flying-line-3" class="flying">
+      <p id="flying-text-3"> Flying text 3 </p>
+		</div>
+  </div>
+-->
+</body>
+<script>
+var data = {{first_time|tojson|safe}};
+console.log(data);
+</script>
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="{{ours_js}}?v={{version}}"></script>
+<script src="{{radar_js}}?v={{version}}"></script>
+<!-- <script src={{flying_js}}></script> -->
+<!-- <script src={{d3}}></script> -->
+
+</html>

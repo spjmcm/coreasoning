@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+<link rel="stylesheet" href="https://rawgit.com/tpreusse/radar-chart-d3/master/src/radar-chart.css">
+
+<style>
+body {
+  padding: 20px;
+}
+
+.radar-chart .area {
+  fill-opacity: 1.0;
+}
+.radar-chart.focus .area {
+  fill-opacity: 0.3;
+}
+
+.area.stars, .stars{
+  fill: #FFD700;
+  stroke: none;
+}
+.area.negative_space, .negative_space .circle {
+  fill: #2a0141;
+  fill-opacity: 0.7;
+  stroke: none;
+}
+</style>
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="https://rawgit.com/tpreusse/radar-chart-d3/master/src/radar-chart.js"></script>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<span></span>
+
+<script>
+var data = [
+    {className: 'negative_space',
+     axes: [
+        {axis: "Qual.", value: 5},
+        {axis: "Speed", value: 5},
+        {axis: "Comm.", value: 5}]},
+  {className: 'stars', // optional can be used for styling
+   axes: [
+      {axis: "Qual.", value: 1},
+      {axis: "Speed", value: 4.3},
+      {axis: "Comm.", value: 5}]}
+];
+
+var data_2 = [
+    {className: 'negative_space',
+     axes: [
+        {axis: "Qual.", value: 5},
+        {axis: "Speed", value: 5},
+        {axis: "Comm.", value: 5}]},
+  {className: 'stars', // optional can be used for styling
+   axes: [
+      {axis: "Qual.", value: 3.9},
+      {axis: "Speed", value: 4.7},
+      {axis: "Comm.", value: 4.9}]}
+];
+
+var data_3 = [
+    {className: 'negative_space',
+     axes: [
+        {axis: "Qual.", value: 5},
+        {axis: "Speed", value: 5},
+        {axis: "Comm.", value: 5}]},
+  {className: 'stars', // optional can be used for styling
+   axes: [
+      {axis: "Qual.", value: 4.9},
+      {axis: "Speed", value: 4.7},
+      {axis: "Comm.", value: 5}]}
+];
+
+
+RadarChart.defaultConfig.color = function() {};
+RadarChart.defaultConfig.radius = 5;
+RadarChart.defaultConfig.w = 230;
+RadarChart.defaultConfig.h = 230;
+RadarChart.defaultConfig.circles = false;
+// RadarChart.defaultConfig.open = true;
+RadarChart.defaultConfig.levels = 0;
+// RadarChart.defaultConfig.levelTick = true;
+
+function negative_space_opacity(side_id, r1, r2, r3){
+    var rating_total = r1 + r2 + r3;
+    console.log(`rating_total is ${rating_total}`)
+    var missing_points = rating_total <= 12 ? 2.8 : 15 - rating_total;
+    var opacity = (3 - missing_points )/3;
+    console.log(`Opacity would be ${opacity}`)
+    $(`.radar_${side_id} .negative_space`).attr("style", `fill-opacity:${opacity}`);
+}
+
+var chart = RadarChart.chart();
+var cfg = chart.config(); // retrieve default config
+var svg = d3.select('body').append('svg')
+  .attr('width', cfg.w + cfg.w + 50)
+  .attr('height', cfg.h + cfg.h / 4)
+  .attr('class', 'radar_1');
+svg.append('g').classed('single', 1).datum(data).call(chart);
+negative_space_opacity('1', data[1].axes[0].value,
+                                  data[1].axes[1].value,
+                                  data[1].axes[2].value)
+
+var svg_2 = d3.select('body').append('svg')
+  .attr('width', cfg.w + cfg.w + 50)
+  .attr('height', cfg.h + cfg.h / 4)
+  .attr('class', 'radar_2');
+svg_2.append('g').classed('single', 1).datum(data_2).call(chart);
+negative_space_opacity('2', data_2[1].axes[0].value,
+                                  data_2[1].axes[1].value,
+                                  data_2[1].axes[2].value)
+
+var svg_3 = d3.select('body').append('svg')
+.attr('width', cfg.w + cfg.w + 50)
+.attr('height', cfg.h + cfg.h / 4)
+.attr('class', 'radar_2');
+svg_3.append('g').classed('single', 1).datum(data_3).call(chart);
+negative_space_opacity('3', data_3[1].axes[0].value,
+                                data_3[1].axes[1].value,
+                                data_3[1].axes[2].value)
+
+
+
+</script>

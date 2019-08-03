@@ -1,0 +1,31 @@
+.icon{
+    width: 200px;
+    height: 300px;
+
+}
+
+.warning{
+	color: red;
+}
+.candidate-info .bios{
+    font-size: 20px;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 200;
+}
+
+.belief-description{
+/*    margin-left: 15px;*/
+/*    padding-left: 0px;*/
+    font-weight: 200;
+}
+
+
+
+.candidate-card{
+/*    padding: auto 20px;*/
+}
+
+
+.belief-button{
+
+}

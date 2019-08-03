@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src={{rating}}></script>
+	<link rel="stylesheet" href={{css}} type='text/css'></script>
+</head>
+<body class="brand-bgcolor">
+	<div class="brand-bgcolor" style="padding-top: 20px; padding-bottom: 5px;">
+		<div class="progress brand-bgcolor" style="width: 90%; margin-left: auto; margin-right: auto;">
+			<div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%; min-width: 2em;">
+				{{progress}}%
+			</div>
+		</div>
+	</div>
+	<div id="big_image_div" style="background-color: white; background-position: center;">
+		<img id="face" style="height: 20vw;" src="{{img}}"/>
+		<!-- <h3 style="color: #000;">{{ name }}</h3> -->
+	</div>
+	<div class="brand-bgcolor" style="width: 100% !important; float: left; padding: 1%; padding-top: 3%;">
+		<div style="margin-left: auto; margin-right: auto; font-size: 3em;">
+			{% autoescape false %}
+				{{rating_interface}}
+			{% endautoescape %}
+			<div id="confirm_div" class="hiding">
+				<button id="confirm_button" type="button" class="btn btn-lg btn-success">Done</button>
+			</div>
+		</div>
+	</div>
+	<!-- </div> -->
+</body>
+<script src= {{ours}}></script>
+</html>
