@@ -1,13 +1,15 @@
 import mysql.connector
 from mysql.connector import Error
 from mysql.connector import errorcode
+import pandas as pd
+import numpy as np
 
 def insertRecord(group_name, story, question1, question2):
     #split a story into sentences
     sentenses = story.split('.')
 
     try:
-        connection = mysql.connector.connect(host='47.252.82.40',
+        connection = mysql.connector.connect(host='localhost',
                                              database='story',
                                              user='zhengzhang',
                                              password='zz498270958')
@@ -28,7 +30,7 @@ def insertRecord(group_name, story, question1, question2):
             connection.close()
             print("MySQL connection is closed")
 
-insertRecord('Group 1',
-             'Bryan was trying to do his homework, but his dogs were barking. His dogs were hungry and they had no food. Bryan was forced to go out and buy food. Bryan bought food in bulk for his dogs. The dogs were happy and let Brian do his work.',
-             'why were the dogs happy?',
-             'why did Bryan need to buy food?')
+
+df = pd.read_csv('stories.csv', header=0)
+for i in range(len(df)):
+    insertRecord(df.iloc[i, 'Group'], df.iloc[i, 'Story'], df.iloc[i, 'Question1'], df.iloc[i, 'Question2'])
