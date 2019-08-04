@@ -12,7 +12,8 @@ def insertRecord(group_name, story, question1, question2):
         connection = mysql.connector.connect(host='localhost',
                                              database='story',
                                              user='zhengzhang',
-                                             password='zz498270958')
+                                             password='zz498270958',
+                                             use_pure=True)
         cursor = connection.cursor(prepared=True)
         sql_insert_query = ''' INSERT INTO stories (group_name, sen_1, sen_2, sen_3, sen_4, sen_5, Q1, Q2) VALUES (%s, %s, %s, %s, %s, %s, %s)'''
         insert_tuple = (group_name, sentenses[0], sentenses[1], sentenses[2], sentenses[3], sentenses[4], question1, question2)
