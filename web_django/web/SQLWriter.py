@@ -33,4 +33,4 @@ def insertRecord(group_name, story, question1, question2):
 
 df = pd.read_csv('stories.csv', header=0)
 for i in range(len(df)):
-    insertRecord(df.iloc[i, 'Group'], df.iloc[i, 'Story'], df.iloc[i, 'Question1'], df.iloc[i, 'Question2'])
+    insertRecord(df.iloc[i]['Group'], df.iloc[i]['Story'], df.iloc[i]['Question1'], df.iloc[i]['Question2'])
