@@ -49,7 +49,7 @@ linesg = svg.append("g");
 circlesg = svg.append("g");
 
 //create the structure of graph based on json file
-d3.json("/static/data/q(1).json", function(json) {
+d3.json("/static/data/q_dog.json", function(json) {
     // decorate a node with a count of its children
     nodes = json.nodes;
     links = json.links;
