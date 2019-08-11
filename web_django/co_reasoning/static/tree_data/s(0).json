@@ -1,1 +1,16 @@
-["person(ann)", "person(mary)", "request(go_to(shops))", "request(donate(money))", "ring(ann,doorbell)", "in_flat(mary)", "watch(mary,tv)", "get_up(mary,chair)", "walk_to(mary,door)", "afraid(mary)", "look_through(mary,keyhole)", "see_at(mary,ann,door)", "flatmate(mary,ann)", "open(mary,door)", "ask(mary,ann,use(doorkeys))", "upset_with(ann,mary)", "-agree(mary,request_from(ann,go_to(shops)))", "wants(ann,get_up(mary,chair))"]
+["is_food(food)",
+"is_homework(homework)",
+"is_person(bryan)",
+"is_work(work1)",
+"is_dog(dog1)",
+"have_dog(bryan,dog1)",
+"do(bryan,homework)",
+"have_homework(bryan,homework)",
+"is_barking(dog1)",
+"is_hungry(dog1)",
+"-have(dog1,food)",
+"is_forced(bryan,go_out)",
+"is_forced(bryan,buy(food))",
+"buy_for(bryan,food,dog1)",
+"is_happy(dog1)",
+"let(dogs1,do(bryan,homework))"]

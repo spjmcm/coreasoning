@@ -1,0 +1,192 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "do(Person,homework)=true"
+    },
+    {
+      "id": "need(Person,quiet_environment)=true"
+    },
+    {
+      "id": "is_hungry(Animal)=true"
+    },
+    {
+      "id": "have(Animal,hunger)=true"
+    },
+    {
+      "id": "satisfy(Food,hunger)=true"
+    },
+    {
+      "id": "need(Animal,eat(Food))=true"
+    },
+    {
+      "id": "is_food(Food)"
+    },
+    {
+      "id":"-have(Animal,Food)"
+    },
+    {
+      "id":"is_nohappy(Animal)"
+    },
+    {
+      "id":"is_dog(Dog)"
+    },
+    {
+      "id":"is_barking(Dog)"
+    },
+    {
+      "id":"is_making_noise(Dog)"
+    },
+    {
+      "id":"have_dog(Person,Dog)"
+    },
+    {
+      "id":"want(Person,-is_making_noise(Dog))"
+    },
+    {
+      "id":"want(Person,satisfy(Person,Dog))"
+    },
+    {
+      "id":"buy_for(Person,Food,Animal)"
+    },
+    {
+      "id":"is_happy(Dog)"
+    },
+    {
+      "id":"stop(is_making_noise(Dog))"
+    },
+    {
+      "id":"stop(do(Person,homework))"
+    },
+    {
+      "id":"continue(Person,do(Person,homework))"
+    },
+    {
+      "id": "have(Person,quiet_environment)=true"
+    }
+  ],
+  "links": [
+    {
+      "name": "p(1)",
+      "source": 0,
+      "target": 1
+    },
+    {
+      "name": "p(2)",
+      "source": 2,
+      "target": 3
+    },
+    {
+      "name": "p(3)",
+      "source": 3,
+      "target": 5
+    },
+    {
+      "name": "p(4)",
+      "source": 4,
+      "target": 5
+    },
+    {
+      "name": "p(5)",
+      "source": 6,
+      "target": 4
+    },
+    {
+      "name": "p(6)",
+      "source": 5,
+      "target": 8
+    },
+    {
+      "name": "p(7)",
+      "source": 9,
+      "target": 10
+    },
+    {
+      "name": "p(8)",
+      "source": 8,
+      "target": 10
+    },
+    {
+      "name": "p(9)",
+      "source": 10,
+      "target": 11
+    },
+    {
+      "name": "p(10)",
+      "source": 11,
+      "target": 13
+    },
+    {
+      "name": "p(11)",
+      "source": 1,
+      "target": 13
+    },
+    {
+      "name": "p(12)",
+      "source": 13,
+      "target": 14
+    },
+    {
+      "name": "p(13)",
+      "source": 14,
+      "target": 15
+    },
+    {
+      "name": "p(14)",
+      "source": 5,
+      "target": 15
+    },
+    {
+      "name": "p(15)",
+      "source": 15,
+      "target": 16
+    },
+    {
+      "name": "p(16)",
+      "source": 5,
+      "target": 16
+    },
+    {
+      "name": "p(17)",
+      "source": 16,
+      "target": 17
+    },
+    {
+      "name": "p(18)",
+      "source": 9,
+      "target": 17
+    },
+    {
+      "name": "p(19)",
+      "source": 12,
+      "target": 20
+    },
+    {
+      "name": "p(20)",
+      "source": 17,
+      "target": 20
+    },
+    {
+      "name": "p(21)",
+      "source": 20,
+      "target": 19
+    },
+    {
+      "name": "p(22)",
+      "source": 1,
+      "target": 20
+    },
+    {
+      "name": "p(23)",
+      "source": 12,
+      "target": 18
+    },
+    {
+      "name": "p(24)",
+      "source": 12,
+      "target": 20
+    }
+  ]
+}

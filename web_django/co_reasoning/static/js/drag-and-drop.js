@@ -1,6 +1,8 @@
 var narrative_count = 0, top_index = 0;
 var text_explain_height, question = "has(ann,doorkeys)";
+
 $(document).ready(function () {
+    // flesh out the list of rules from json file
     text_explain_height = $("#text_explain").height();
     $.getJSON("/static/tree_data/s(0).json", function (data) {
         $.each( data, function( index, narrative) {
@@ -27,6 +29,7 @@ $(document).ready(function () {
     });
 });
 
+//nothing to do during dragging
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -37,6 +40,7 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
+    //get the target id for retrieving the text inside it
     var data = ev.dataTransfer.getData("text");
     var source = $("#" + data).text().trim();
     if(source.startsWith("-")){

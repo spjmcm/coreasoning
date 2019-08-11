@@ -47,7 +47,7 @@ var simulation = d3.forceSimulation()
 var node_data = [],
     link_data = [];
 
-d3.json("/static/data/q(1).json", function(error, graph) {
+d3.json("/static/data/q_dog.json", function(error, graph) {
     if (error) throw error;
     node_data = graph.nodes;
     link_data = graph.links;
