@@ -173,6 +173,7 @@ text {
   background-color: grey;
   padding: 2px;
   height: 30%;
+  text-align: center;
 }
 
 .node-input{
