@@ -176,6 +176,10 @@ text {
   background-color: grey;
 }
 
+.input-example{
+  margin-bottom: 6px;
+}
+
 svg{
     width: 100%;
     height: 473px;
