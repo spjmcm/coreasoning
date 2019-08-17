@@ -176,11 +176,12 @@ text {
 }
 
 .node-input{
-  margin:  auto;
+  margin: auto;
 }
 
 .add-rule-button{
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 svg{
