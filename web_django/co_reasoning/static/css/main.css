@@ -180,12 +180,6 @@ text {
   margin: auto;
 }
 
-.add-rule-button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 svg{
     width: 100%;
     height: 473px;
