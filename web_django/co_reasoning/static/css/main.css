@@ -172,6 +172,7 @@ text {
   margin-top: 5px;
   background-color: grey;
   padding: 2px;
+  height: max-content;
 }
 
 .node-example{
