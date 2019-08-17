@@ -176,8 +176,17 @@ text {
   text-align: center;
 }
 
+#manual-input{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .node-input{
   margin: auto;
+}
+
+.add-rule-button{
+  margin: 5px;
 }
 
 svg{
