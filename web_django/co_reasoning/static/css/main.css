@@ -43,6 +43,10 @@ text {
     height: 900px;
 }
 
+#workspace{
+  height: 700px;
+}
+
 #div1{
     padding: 0px;
     min-width: 270px;
