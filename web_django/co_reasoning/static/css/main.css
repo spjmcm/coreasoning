@@ -51,6 +51,10 @@ text {
   height: 100%;
 }
 
+#svg_for_vis{
+  height: 100%;
+}
+
 #div1{
     padding: 0px;
     min-width: 270px;
