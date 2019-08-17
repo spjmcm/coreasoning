@@ -174,10 +174,16 @@ text {
 .input-box{
   margin-top: 5px;
   background-color: grey;
+  padding: 2px;
 }
 
 .input-example{
   margin-bottom: 6px;
+  width: 100%;
+}
+
+.input-text{
+  width: 100%;
 }
 
 svg{
