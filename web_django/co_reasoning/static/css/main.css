@@ -177,6 +177,14 @@ text {
   padding: 2px;
 }
 
+.node-example{
+  margin: 1px;
+}
+
+.node-input{
+  margin:  1px;
+}
+
 .input-example{
   margin-bottom: 6px;
   width: 100%;
