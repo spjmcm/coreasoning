@@ -32,15 +32,12 @@ text {
   border: 1px solid black;
 }
 
-#div1, #div2 {
+#div1, #div2{
     float: left;
     /*margin: 10px;*/
     padding: 10px;
+    height: 900px;
     /*border: 1px solid black;*/
-}
-
-#div1, #content{
-    height: 1100px;
 }
 
 #workspace{
