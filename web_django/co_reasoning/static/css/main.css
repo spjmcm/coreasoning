@@ -47,6 +47,10 @@ text {
   height: 700px;
 }
 
+#canvas{
+  height: 100%;
+}
+
 #div1{
     padding: 0px;
     min-width: 270px;
