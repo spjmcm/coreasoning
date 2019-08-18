@@ -11,7 +11,7 @@ $('.add-rule-button').on('click', () => {
       has_contain = true;
     }
   });
-  if(has_contain)
+  if(!has_contain)
   {
     $('#list-narrative').append("<li class='narrative nav-item' draggable='true' ondragstart='drag(event)' id='drag" + narrative_count+1 + "'>" +
         "<i class='fa fa-circle-o'></i> " + new_rule + "</li>");
