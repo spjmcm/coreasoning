@@ -6,7 +6,7 @@ $('.add-rule-button').on('click', () => {
   has_contain = false;
   $('#list-narrative li').each(function(index) {
     //trim the space around the text
-    if($(this).text().trim == new_rule)
+    if($(this).text().trim() == new_rule)
     {
       console.log('new rule has existed');
       has_contain = true;
