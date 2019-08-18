@@ -4,7 +4,7 @@ $('.add-rule-button').on('click', () => {
   object = $('#object').val();
   new_rule = verb+'('+subject+','+object+')';
   has_contain = false;
-  $('#list-narrative').each(function(index) {
+  $('#list-narrative li').each(function(index) {
      console.log($(this).text());
      console.log($(this).text() == new_rule);
     if($(this).text() == new_rule)
