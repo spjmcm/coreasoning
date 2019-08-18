@@ -7,7 +7,8 @@ $('.add-rule-button').on('click', () => {
   $('#list-narrative li').each(function(index) {
      console.log($(this).text());
      console.log(new_rule);
-     console.log($(this).text() == new_rule);
+     // trim the space around the text
+     console.log($(this).text().trim() == new_rule);
     if($(this).text() == new_rule)
     {
       console.log('new rule has existed');
