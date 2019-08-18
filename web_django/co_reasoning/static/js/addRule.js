@@ -8,7 +8,6 @@ $('.add-rule-button').on('click', () => {
     if($(this).text() == new_rule)
     {
       has_contain = true;
-      break;
     }
   });
   if(has_contain == false)
