@@ -5,12 +5,13 @@ $('.add-rule-button').on('click', () => {
   new_rule = verb+'('+subject+','+object+')';
   has_contain = false;
   $('#list_narrative').each(function() {
-    if($(this).text() == new_rule)
+    if($(this).text() === new_rule)
     {
+      console.log('new rule has existed');
       has_contain = true;
     }
   });
-  if(has_contain == false)
+  if(has_contain)
   {
     $('#list-narrative').append("<li class='narrative nav-item' draggable='true' ondragstart='drag(event)' id='drag" + narrative_count+1 + "'>" +
         "<i class='fa fa-circle-o'></i> " + new_rule + "</li>");
