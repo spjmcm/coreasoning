@@ -5,11 +5,8 @@ $('.add-rule-button').on('click', () => {
   new_rule = verb+'('+subject+','+object+')';
   has_contain = false;
   $('#list-narrative li').each(function(index) {
-     console.log($(this).text());
-     console.log(new_rule);
-     // trim the space around the text
-     console.log($(this).text().trim() == new_rule);
-    if($(this).text() == new_rule)
+    //trim the space around the text
+    if($(this).text().trim == new_rule)
     {
       console.log('new rule has existed');
       has_contain = true;
