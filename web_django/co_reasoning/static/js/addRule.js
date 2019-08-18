@@ -5,6 +5,7 @@ $('.add-rule-button').on('click', () => {
   new_rule = verb+'('+subject+','+object+')';
   has_contain = false;
   $('#list_narrative').each(function() {
+    console.log('pass');
     if($(this).text() === new_rule)
     {
       console.log('new rule has existed');
