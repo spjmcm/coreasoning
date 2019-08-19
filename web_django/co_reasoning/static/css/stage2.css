@@ -2,15 +2,22 @@
   font-size: 20px;
   font-family: sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 #instruction{
   font-size: 10px;
   font-family: sans-serif;
+  text-align: center;
 }
 
 #rep-canvas{
   height: 900px;
   width: 100%;
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+.content > div{
+  display: block;
+  float: left;
 }
