@@ -14,6 +14,25 @@
   </head>
   <body>
     <div class="content">
+      <nav id="div1">
+
+          <div class="sidebar-header">
+              <h4>Options</h4>
+          </div>
+
+          <div class="input-group input-group-sm" style="margin: 10px 0px">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm" style="width: 40px; padding-left: 13px;"><i class="fas fa-plus"></i></span>
+              </div>
+              <!-- Searching bar -->
+              <input id="input_add_node" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Type here to add new narratives">
+          </div>
+          <!-- The list of node narrative -->
+          <ul id="list-narrative">
+            
+          </ul>
+      </nav>
+
       <div id="title">Stage 2: Word generalization</div>
       <div id="instruction">We want to use your explanation to help our AI understand similar stories in the future. We can achieve this by making the knowledge you have designed more general. Since this AI understands knowledge as "rules," look at each rule and determine how general you can make it while still making sense.</div>
       <div class="container-fluid rounded" id="rep-canvas">
