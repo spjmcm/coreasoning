@@ -8,6 +8,9 @@ import json, os
 def index(request):
     return render(request, 'index.html')
 
+def wordreplacement(request):
+    return render(request, 'wordreplacement.html')
+
 def generalize(request):
     #get all the story object
     try:

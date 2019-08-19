@@ -29,7 +29,7 @@ $(document).ready(function () {
     });
 
     $('#submit').click(function (){
-      window.location.href = "/templates/wordreplacement.html";
+      window.location.href = "wordreplacement";
       return false;
     })
 });
