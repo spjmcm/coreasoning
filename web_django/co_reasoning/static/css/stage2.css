@@ -17,15 +17,5 @@
 #rep-canvas{
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 0, 0, 0.5);
-}
-
-.content > div{
-  display: block;
-  float: left;
-}
-
-.content{
-  align-items: stretch;
-  height: 900px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
