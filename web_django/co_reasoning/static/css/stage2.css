@@ -20,3 +20,19 @@
   width: 100%;
   background-color: grey;
 }
+
+.carousel-inner{
+  height: 100%;
+  width: 100%;
+}
+
+.mod-area{
+  height: 80%;
+  width: 100%;
+}
+
+.button-group{
+  height: 20%;
+  width: 100%;
+  text-align: center;
+}
