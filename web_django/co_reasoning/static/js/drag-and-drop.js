@@ -27,6 +27,11 @@ $(document).ready(function () {
             $("#text_explain").height(body - 168 - $(target).height() - $($(".text_header")[0]).height());
         }
     });
+
+    $('#submit').click(function (){
+      window.location.href = "wordreplacement.html";
+      return false;
+    })
 });
 
 //nothing to do during dragging

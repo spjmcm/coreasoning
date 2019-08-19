@@ -1,0 +1,16 @@
+#title{
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#instruction{
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+#rep-canvas{
+  height: 900px;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.5);
+}
