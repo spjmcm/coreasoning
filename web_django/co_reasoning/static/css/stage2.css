@@ -18,7 +18,10 @@
 #carouselExampleSlidesOnly{
   height: 80%;
   width: 100%;
-  background-color: grey;
+  background-color: white;
+  border: 2px;
+  border-color: black;
+  border-width: thin;
 }
 
 .carousel-inner{
@@ -29,6 +32,10 @@
 .carousel-item{
   height: 100%;
   width: 100%;
+}
+
+.container-fluid{
+  text-align:center;
 }
 
 .mod-area{
