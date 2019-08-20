@@ -36,7 +36,10 @@
 
 .container-fluid{
   text-align:center;
-  margin-top: 50%;
+}
+
+.rule-display{
+  margin-top: 30%;
 }
 
 .mod-area{
