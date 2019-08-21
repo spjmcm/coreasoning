@@ -4,8 +4,14 @@ $(document).ready(function () {
     $('.prev-button').on('click', function() {
       $('.carousel').carousel('prev');
     });
+
     $('.next-button').on('click', function() {
       $('.carousel').carousel('next');
+    });
+
+    $('.carousel').on('slid.bs.carousel', function(){
+      var frame_index = $(this).find('.active').index();
+      $('#rule'+frame_index).css('color', 'red');
     });
 
     initRuleList();
@@ -16,7 +22,7 @@ function initRuleList(){
   data = $.getJSON("/static/data/rules.json", function(data) {
     $.each(data, function(i, obj)
     {
-      $('#list-narrative').append("<li class='narrative nav-item' id='rule"+(i+1) + "'>" +
+      $('#list-narrative').append("<li class='narrative nav-item' id='rule"+i + "'>" +
           "<i class='fa fa-circle-o'></i> " + "rule"+(i+1) +"</li>")
     });
   });
