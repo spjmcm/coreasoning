@@ -20,3 +20,4 @@ function initRuleList(){
           "<i class='fa fa-circle-o'></i> " + rule+(i+1) +"</li>")
     }
   }
+};
