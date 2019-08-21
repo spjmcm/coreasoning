@@ -16,8 +16,8 @@ function initRuleList(){
   data = $.getJSON("/static/data/rules.json", function(data) {
     $.each(data, function(i, obj)
     {
-      $('#list-narrative').append("<li class='narrative nav-item' id='rule" + (i+1) + "'>" +
-          "<i class='fa fa-circle-o'></i> " + (i+1) +"</li>")
+      $('#list-narrative').append("<li class='narrative nav-item' id='rule" + rule+(i+1) + "'>" +
+          "<i class='fa fa-circle-o'></i> " + rule+(i+1) +"</li>")
     });
   });
 };
