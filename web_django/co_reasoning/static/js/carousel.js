@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 function initRuleList(){
   //display the rule list
-  data = $.getJSON("/static/data/rules.json", function(data)) {
+  data = $.getJSON("/static/data/rules.json", function(data) {
     $.each(data, function(i, obj))
     {
       $('#list-narrative').append("<li class='narrative nav-item' id='rule" + (i+1) + "'>" +
