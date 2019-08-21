@@ -1,0 +1,17 @@
+[
+  {
+    "id": 0,
+    "condition": "isHungry(Dog)",
+    "result": "need(Dog, eat(Dog, Food))"
+  },
+  {
+    "id": 1,
+    "condition": "need(Dog, eat (Dog Food))",
+    "result": "buy_for(Person, Dog Food, Dog)"
+  },
+  {
+    "id": 2,
+    "condition": "buy_for(Person, Dog Food, Dog)",
+    "result": "eats_Food(dog)"
+  }
+]
