@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     $('.carousel').on('slid.bs.carousel', function(){
       var frame_index = $(this).find('.active').index();
+      console.log('now carousel is on '+frame_index);
       $('#rule'+frame_index).css('color', 'red');
     });
 
