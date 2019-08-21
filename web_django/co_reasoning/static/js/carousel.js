@@ -18,6 +18,6 @@ function initRuleList(){
     {
       $('#list-narrative').append("<li class='narrative nav-item' id='rule" + (i+1) + "'>" +
           "<i class='fa fa-circle-o'></i> " + rule+(i+1) +"</li>")
-    }
+    });
   }
 };
