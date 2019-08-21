@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     var init_active = $('.carousel').find('.active').index();
-    $('#rule'+init-active).css('color', 'red');
+    $('#rule'+init_active).css('color', 'red');
 
     $('.carousel').on('slide.bs.carousel', function(ev){
       var slide_from = $(this).find('.active').index();
