@@ -9,10 +9,11 @@ $(document).ready(function () {
       $('.carousel').carousel('next');
     });
 
-    $('.carousel').on('slid.bs.carousel', function(){
-      var frame_index = $(this).find('.active').index();
-      console.log('now carousel is on '+frame_index);
-      $('#rule'+frame_index).css('color', 'red');
+    $('.carousel').on('slide.bs.carousel', function(ev){
+      var slide_from = $(this).find('.active').index();
+      var slide_to = $(ev.relatedTarget).index();
+      $('#rule'+slide_from).css('color', 'black');
+      $('#rule'+slide_to).css('color', 'red');
     });
 
     initRuleList();
