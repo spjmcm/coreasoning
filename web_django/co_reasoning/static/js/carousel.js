@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('.carousel').on('slide.bs.carousel', function(ev){
       var slide_from = $(this).find('.active').index();
       var slide_to = $(ev.relatedTarget).index();
-      $('#rule'+slide_from).css('color', 'black');
+      $('#rule'+slide_from).css('color', 'white');
       $('#rule'+slide_to).css('color', 'red');
     });
 
