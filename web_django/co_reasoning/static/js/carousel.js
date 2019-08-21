@@ -12,12 +12,11 @@ $(document).ready(function () {
 });
 
 function initRuleList(){
-  //get the length of json array
-  data = $.getJSON("/static/data/rules.json");
-  len = data.length();
-  for(var i=0; i<data.length; i++)
-  {
-    $('#list-narrative').append("<li class='narrative nav-item' id='rule" + (i+1) + "'>" +
-        "<i class='fa fa-circle-o'></i> " + rule+(i+1) +"</li>")
+  //display the rule list
+  data = $.getJSON("/static/data/rules.json", function(data)) {
+    $.each(data, function(i, obj))
+    {
+      $('#list-narrative').append("<li class='narrative nav-item' id='rule" + (i+1) + "'>" +
+          "<i class='fa fa-circle-o'></i> " + rule+(i+1) +"</li>")
+    }
   }
-}
